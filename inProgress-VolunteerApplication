@@ -1,0 +1,2095 @@
+// For full API documentation, including code examples, visit http://wix.to/94BuAAs
+
+$w.onReady(function () {
+	//TODO: write your page related code here...
+
+});
+
+// POSITONS APPLYING FOR | Start
+
+// PRIMARY POSITION | Start
+export function PrimaryChoices_change() {
+
+let PrimaryChoices = $w("#PrimaryChoices");
+let SecondaryChoices = $w("#SecondaryChoices");
+
+let admCommitment = $w("#adminCommitment1");
+let autCommitment = $w("#authorCommitment1");
+let artCommitment = $w("#artistCommitment1");
+let vlogCommitment = $w("#vloggerCommitment1");
+let strCommitment = $w("#streamerCommitment1");
+
+let autContent = $w("#authorContent1");
+let artContent = $w("#artistContent1");
+let vlogContent = $w("#vloggerContent1");
+let strContent = $w("#streamerContent1");
+
+let Admin = (PrimaryChoices.value === "Admin");
+let Author = (PrimaryChoices.value === "Author");
+let Artist = (PrimaryChoices.value === "Artist");
+let Vlogger = (PrimaryChoices.value === "Vlogger");
+let Streamer = (PrimaryChoices.value === "Streamer");
+
+/*
+CURRENTLY UNREAD
+let AdmDiv = $w("#admDiv1");
+let AutDiv = $w("#autDiv1");
+let ArtDiv = $w("#artDiv1");
+let VlogDiv = $w("#vlogDiv1");
+let StrDiv = $w("#strDiv1");
+*/
+
+let SunAdm = $w("#admDaySun1");
+let MonAdm = $w("#admDayMon1");
+let TueAdm = $w("#admDayTue1");
+let WedAdm = $w("#admDayWed1");
+let ThurAdm = $w("#admDayThur1");
+let FriAdm = $w("#admDayFri1");
+let SatAdm = $w("#admDaySat1");
+
+let SunAut = $w("#autDaySun1");
+let MonAut = $w("#autDayMon1");
+let TueAut = $w("#autDayTue1");
+let WedAut = $w("#autDayWed1");
+let ThurAut = $w("#autDayThur1");
+let FriAut = $w("#autDayFri1");
+let SatAut = $w("#autDaySat1");
+
+let SunArt = $w("#artDaySun1");
+let MonArt = $w("#artDayMon1");
+let TueArt = $w("#artDayTue1");
+let WedArt = $w("#artDayWed1");
+let ThurArt = $w("#artDayThur1");
+let FriArt = $w("#artDayFri1");
+let SatArt = $w("#artDaySat1");
+
+let SunVlog = $w("#vlogDaySun1");
+let MonVlog = $w("#vlogDayMon1");
+let TueVlog = $w("#vlogDayTue1");
+let WedVlog = $w("#vlogDayWed1");
+let ThurVlog = $w("#vlogDayThur1");
+let FriVlog = $w("#vlogDayFri1");
+let SatVlog = $w("#vlogDaySat1");
+
+let SunStr = $w("#strDaySun1");
+let MonStr = $w("#strDayMon1");
+let TueStr = $w("#strDayTue1");
+let WedStr = $w("#strDayWed1");
+let ThurStr = $w("#strDayThur1");
+let FriStr = $w("#strDayFri1");
+let SatStr = $w("#strDaySat1");
+
+if (PrimaryChoices.value !== undefined) {
+
+   SecondaryChoices.enable();
+      console.log('Primary Position Selected | Enabling Secondary Position Selection');
+
+}
+
+else {
+
+   SecondaryChoices.disable();
+
+}
+
+if (Admin) {
+
+   admCommitment.expand();
+      console.log('Primary Position Selected: ADMIN | Expanding ADMIN COMMITMENT CONTAINER 1');
+
+      if (admCommitment.collapsed !== true) {
+         SunAdm.required = true;
+         MonAdm.required = true;
+         TueAdm.required = true;
+         WedAdm.required = true;
+         ThurAdm.required = true;
+         FriAdm.required = true;
+         SatAdm.required = true;
+       console.log('Requiring Admin 1 Checkboxes');
+	  }
+	  
+}
+
+else {
+	    admCommitment.collapse();
+		 SunAdm.required = false;
+         MonAdm.required = false;
+         TueAdm.required = false;
+         WedAdm.required = false;
+         ThurAdm.required = false;
+         FriAdm.required = false;
+         SatAdm.required = false;
+   
+}
+
+if (Author) {
+
+   autCommitment.expand();
+   autContent.required = true;
+      console.log('Primary Position Selected: AUTHOR | Expanding ADMIN COMMITMENT CONTAINER 1 \& Requiring authorContent1');
+	  
+	  if (autCommitment.collapsed !== true) {
+         SunAut.required = true;
+         MonAut.required = true;
+         TueAut.required = true;
+         WedAut.required = true;
+         ThurAut.required = true;
+         FriAut.required = true;
+         SatAut.required = true;
+       console.log('Requiring Author 1 Checkboxes');
+	  }
+}
+
+else {
+	   autCommitment.collapse();
+	   autContent.required = false;
+		 SunAut.required = false;
+         MonAut.required = false;
+         TueAut.required = false;
+         WedAut.required = false;
+         ThurAut.required = false;
+         FriAut.required = false;
+         SatAut.required = false;
+
+}
+
+if (Artist) {
+
+   artCommitment.expand();
+   artContent.required = true;
+      console.log('Primary Position Selected: ARTIST | Expanding ARTIST COMMITMENT CONTAINER 1 \& Requiring artistContent1');
+	  
+	  if (artCommitment.collapsed !== true) {
+         SunArt.required = true;
+         MonArt.required = true;
+         TueArt.required = true;
+         WedArt.required = true;
+         ThurArt.required = true;
+         FriArt.required = true;
+         SatArt.required = true;
+       console.log('Requiring Artist 1 Checkboxes');
+	  }
+
+}
+else {
+	   artCommitment.collapse();
+	   artContent.required = false;
+		 SunArt.required = false;
+         MonArt.required = false;
+         TueArt.required = false;
+         WedArt.required = false;
+         ThurArt.required = false;
+         FriArt.required = false;
+         SatArt.required = false;
+}
+
+if (Vlogger) {
+
+   vlogCommitment.expand();
+   vlogContent.required = true;
+      console.log('Primary Position Selected: VLOGGER | Expanding VLOGGER COMMITMENT CONTAINER 1 \& Requiring vloggerContent1');
+	  
+	  if (vlogCommitment.collapsed !== true) {
+         SunVlog.required = true;
+         MonVlog.required = true;
+         TueVlog.required = true;
+         WedVlog.required = true;
+         ThurVlog.required = true;
+         FriVlog.required = true;
+         SatVlog.required = true;
+       console.log('Requiring Vlogger 1 Checkboxes');
+	  }
+
+}
+else {
+	   vlogCommitment.collapse();
+	   vlogContent.required = false;
+		 SunVlog.required = false;
+         MonVlog.required = false;
+         TueVlog.required = false;
+         WedVlog.required = false;
+         ThurVlog.required = false;
+         FriVlog.required = false;
+         SatVlog.required = false;
+}
+
+if (Streamer) {
+
+   strCommitment.expand();
+   strContent.required = true;
+      console.log('Primary Position Selected: STREAMER | Expanding STREAMER COMMITMENT CONTAINER 1 \& Requiring streamerContent1');
+	  
+	  if (strCommitment.collapsed !== true) {
+         SunStr.required = true;
+         MonStr.required = true;
+         TueStr.required = true;
+         WedStr.required = true;
+         ThurStr.required = true;
+         FriStr.required = true;
+         SatStr.required = true;
+       console.log('Requiring Streamer 1 Checkboxes');
+	  }
+
+}
+else {
+	   strCommitment.collapse();
+	   strContent.required = false;
+		 SunStr.required = false;
+         MonStr.required = false;
+         TueStr.required = false;
+         WedStr.required = false;
+         ThurStr.required = false;
+         FriStr.required = false;
+         SatStr.required = false;
+}
+
+}
+// PRIMARY POSITION | End
+
+
+// SECONDARY POSITION | Start
+export function SecondaryChoices_change() {
+
+let SecondaryChoices = $w("#SecondaryChoices");
+let TertiaryChoices = $w("#TertiaryChoices");
+
+let admCommitment = $w("#adminCommitment2");
+
+let artCommitment = $w("#artistCommitment2");
+let vlogCommitment = $w("#vloggerCommitment2");
+let strCommitment = $w("#streamerCommitment2");
+
+let autContent = $w("#authorContent2");
+let artContent = $w("#artistContent2");
+let vlogContent = $w("#vloggerContent2");
+let strContent = $w("#streamerContent2");
+
+let None = (SecondaryChoices.value === "None");
+let Admin = (SecondaryChoices.value === "Admin");
+let Author = (SecondaryChoices.value === "Author");
+let Artist = (SecondaryChoices.value === "Artist");
+let Vlogger = (SecondaryChoices.value === "Vlogger");
+let Streamer = (SecondaryChoices.value === "Streamer");
+
+/*
+CURRENTLY UNREAD
+let AdmDiv = $w("#admDiv2");
+let AutDiv = $w("#autDiv2");
+let ArtDiv = $w("#artDiv2");
+let VlogDiv = $w("#vlogDiv2");
+let StrDiv = $w("#strDiv2");
+*/
+
+let SunAdm = $w("#admDaySun2");
+let MonAdm = $w("#admDayMon2");
+let TueAdm = $w("#admDayTue2");
+let WedAdm = $w("#admDayWed2");
+let ThurAdm = $w("#admDayThur2");
+let FriAdm = $w("#admDayFri2");
+let SatAdm = $w("#admDaySat2");
+
+let SunAut = $w("#autDaySun2");
+let MonAut = $w("#autDayMon2");
+let TueAut = $w("#autDayTue2");
+let WedAut = $w("#autDayWed2");
+let ThurAut = $w("#autDayThur2");
+let FriAut = $w("#autDayFri2");
+let SatAut = $w("#autDaySat2");
+
+let SunArt = $w("#artDaySun2");
+let MonArt = $w("#artDayMon2");
+let TueArt = $w("#artDayTue2");
+let WedArt = $w("#artDayWed2");
+let ThurArt = $w("#artDayThur2");
+let FriArt = $w("#artDayFri2");
+let SatArt = $w("#artDaySat2");
+
+let SunVlog = $w("#vlogDaySun2");
+let MonVlog = $w("#vlogDayMon2");
+let TueVlog = $w("#vlogDayTue2");
+let WedVlog = $w("#vlogDayWed2");
+let ThurVlog = $w("#vlogDayThur2");
+let FriVlog = $w("#vlogDayFri2");
+let SatVlog = $w("#vlogDaySat2");
+
+let SunStr = $w("#strDaySun2");
+let MonStr = $w("#strDayMon2");
+let TueStr = $w("#strDayTue2");
+let WedStr = $w("#strDayWed2");
+let ThurStr = $w("#strDayThur2");
+let FriStr = $w("#strDayFri2");
+let SatStr = $w("#strDaySat2");
+
+if (SecondaryChoices.value !== "None") {
+
+   TertiaryChoices.enable();
+      console.log('Secondary Position Selected | Enabling Secondary Position Selection');
+
+}
+
+else {
+
+   TertiaryChoices.disable();
+
+}
+
+if (Admin) {
+
+   admCommitment.expand();
+      console.log('Secondary Position Selected: ADMIN | Expanding ADMIN COMMITMENT CONTAINER 2');
+
+      if (admCommitment.collapsed !== true) {
+         SunAdm.required = true;
+         MonAdm.required = true;
+         TueAdm.required = true;
+         WedAdm.required = true;
+         ThurAdm.required = true;
+         FriAdm.required = true;
+         SatAdm.required = true;
+       console.log('Requiring Admin 2 Checkboxes');
+	  }
+	  
+}
+
+else {
+	    admCommitment.collapse();
+		 SunAdm.required = false;
+         MonAdm.required = false;
+         TueAdm.required = false;
+         WedAdm.required = false;
+         ThurAdm.required = false;
+         FriAdm.required = false;
+         SatAdm.required = false;
+   
+}
+
+if (Author) {
+let autCommitment = $w("#authorCommitment2");
+
+   autCommitment.expand();
+   autContent.required = true;
+      console.log('Secondary Position Selected: AUTHOR | Expanding ADMIN COMMITMENT CONTAINER 2 \& Requiring authorContent2');
+	  
+	  if (autCommitment.collapsed !== true) {
+         SunAut.required = true;
+         MonAut.required = true;
+         TueAut.required = true;
+         WedAut.required = true;
+         ThurAut.required = true;
+         FriAut.required = true;
+         SatAut.required = true;
+       console.log('Requiring Author 2 Checkboxes');
+	  }
+}
+
+else {
+	   autCommitment.collapse();
+	   autContent.required = false;
+		 SunAut.required = false;
+         MonAut.required = false;
+         TueAut.required = false;
+         WedAut.required = false;
+         ThurAut.required = false;
+         FriAut.required = false;
+         SatAut.required = false;
+
+}
+
+if (Artist) {
+
+   artCommitment.expand();
+   artContent.required = true;
+      console.log('Secondary Position Selected: ARTIST | Expanding ARTIST COMMITMENT CONTAINER 2 \& Requiring artistContent2');
+	  
+	  if (artCommitment.collapsed !== true) {
+         SunArt.required = true;
+         MonArt.required = true;
+         TueArt.required = true;
+         WedArt.required = true;
+         ThurArt.required = true;
+         FriArt.required = true;
+         SatArt.required = true;
+       console.log('Requiring Artist 2 Checkboxes');
+	  }
+
+}
+else {
+	   artCommitment.collapse();
+	   artContent.required = false;
+		 SunArt.required = false;
+         MonArt.required = false;
+         TueArt.required = false;
+         WedArt.required = false;
+         ThurArt.required = false;
+         FriArt.required = false;
+         SatArt.required = false;
+}
+
+if (Vlogger) {
+
+   vlogCommitment.expand();
+   vlogContent.required = true;
+      console.log('Secondary Position Selected: VLOGGER | Expanding VLOGGER COMMITMENT CONTAINER 2 \& Requiring vloggerContent2');
+	  
+	  if (vlogCommitment.collapsed !== true) {
+         SunVlog.required = true;
+         MonVlog.required = true;
+         TueVlog.required = true;
+         WedVlog.required = true;
+         ThurVlog.required = true;
+         FriVlog.required = true;
+         SatVlog.required = true;
+       console.log('Requiring Vlogger 2 Checkboxes');
+	  }
+
+}
+else {
+	   vlogCommitment.collapse();
+	   vlogContent.required = false;
+		 SunVlog.required = false;
+         MonVlog.required = false;
+         TueVlog.required = false;
+         WedVlog.required = false;
+         ThurVlog.required = false;
+         FriVlog.required = false;
+         SatVlog.required = false;
+}
+
+if (Streamer) {
+
+   strCommitment.expand();
+   strContent.required = true;
+      console.log('Secondary Position Selected: STREAMER | Expanding STREAMER COMMITMENT CONTAINER 2 \& Requiring streamerContent2');
+	  
+	  if (strCommitment.collapsed !== true) {
+         SunStr.required = true;
+         MonStr.required = true;
+         TueStr.required = true;
+         WedStr.required = true;
+         ThurStr.required = true;
+         FriStr.required = true;
+         SatStr.required = true;
+       console.log('Requiring Streamer 2 Checkboxes');
+	  }
+
+}
+else {
+	   strCommitment.collapse();
+	   strContent.required = false;
+		 SunStr.required = false;
+         MonStr.required = false;
+         TueStr.required = false;
+         WedStr.required = false;
+         ThurStr.required = false;
+         FriStr.required = false;
+         SatStr.required = false;
+}
+
+}
+// SECONDARY POSITION | End
+
+
+// TERTIARY POSITION | Start
+export function TertiaryChoices_change() {
+
+let TertiaryChoices = $w("#TertiaryChoices");
+
+let admCommitment = $w("#adminCommitment3");
+let autCommitment = $w("#authorCommitment3");
+let artCommitment = $w("#artistCommitment3");
+let vlogCommitment = $w("#vloggerCommitment3");
+let strCommitment = $w("#streamerCommitment3");
+
+let autContent = $w("#authorContent3");
+let artContent = $w("#artistContent3");
+let vlogContent = $w("#vloggerContent3");
+let strContent = $w("#streamerContent3");
+
+let Admin = (TertiaryChoices.value === "Admin");
+let Author = (TertiaryChoices.value === "Author");
+let Artist = (TertiaryChoices.value === "Artist");
+let Vlogger = (TertiaryChoices.value === "Vlogger");
+let Streamer = (TertiaryChoices.value === "Streamer");
+
+/*
+CURRENTLY UNREAD
+let AdmDiv = $w("#admDiv3");
+let AutDiv = $w("#autDiv3");
+let ArtDiv = $w("#artDiv3");
+let VlogDiv = $w("#vlogDiv3");
+let StrDiv = $w("#strDiv3");
+*/
+
+let SunAdm = $w("#admDaySun3");
+let MonAdm = $w("#admDayMon3");
+let TueAdm = $w("#admDayTue3");
+let WedAdm = $w("#admDayWed3");
+let ThurAdm = $w("#admDayThur3");
+let FriAdm = $w("#admDayFri3");
+let SatAdm = $w("#admDaySat3");
+
+let SunAut = $w("#autDaySun3");
+let MonAut = $w("#autDayMon3");
+let TueAut = $w("#autDayTue3");
+let WedAut = $w("#autDayWed3");
+let ThurAut = $w("#autDayThur3");
+let FriAut = $w("#autDayFri3");
+let SatAut = $w("#autDaySat3");
+
+let SunArt = $w("#artDaySun3");
+let MonArt = $w("#artDayMon3");
+let TueArt = $w("#artDayTue3");
+let WedArt = $w("#artDayWed3");
+let ThurArt = $w("#artDayThur3");
+let FriArt = $w("#artDayFri3");
+let SatArt = $w("#artDaySat3");
+
+let SunVlog = $w("#vlogDaySun3");
+let MonVlog = $w("#vlogDayMon3");
+let TueVlog = $w("#vlogDayTue3");
+let WedVlog = $w("#vlogDayWed3");
+let ThurVlog = $w("#vlogDayThur3");
+let FriVlog = $w("#vlogDayFri3");
+let SatVlog = $w("#vlogDaySat3");
+
+let SunStr = $w("#strDaySun3");
+let MonStr = $w("#strDayMon3");
+let TueStr = $w("#strDayTue3");
+let WedStr = $w("#strDayWed3");
+let ThurStr = $w("#strDayThur3");
+let FriStr = $w("#strDayFri3");
+let SatStr = $w("#strDaySat3");
+
+
+if (Admin) {
+
+   admCommitment.expand();
+      console.log('Tertiary Position Selected: ADMIN | Expanding ADMIN COMMITMENT CONTAINER 3');
+
+      if (admCommitment.collapsed !== true) {
+         SunAdm.required = true;
+         MonAdm.required = true;
+         TueAdm.required = true;
+         WedAdm.required = true;
+         ThurAdm.required = true;
+         FriAdm.required = true;
+         SatAdm.required = true;
+       console.log('Requiring Admin 3 Checkboxes');
+	  }
+	  
+}
+
+else {
+	    admCommitment.collapse();
+		 SunAdm.required = false;
+         MonAdm.required = false;
+         TueAdm.required = false;
+         WedAdm.required = false;
+         ThurAdm.required = false;
+         FriAdm.required = false;
+         SatAdm.required = false;
+   
+}
+
+if (Author) {
+
+   autCommitment.expand();
+   autContent.required = true;
+      console.log('Tertiary Position Selected: AUTHOR | Expanding ADMIN COMMITMENT CONTAINER 3 \& Requiring authorContent3');
+	  
+	  if (autCommitment.collapsed !== true) {
+         SunAut.required = true;
+         MonAut.required = true;
+         TueAut.required = true;
+         WedAut.required = true;
+         ThurAut.required = true;
+         FriAut.required = true;
+         SatAut.required = true;
+       console.log('Requiring Author 3 Checkboxes');
+	  }
+}
+
+else {
+	   autCommitment.collapse();
+	   autContent.required = false;
+		 SunAut.required = false;
+         MonAut.required = false;
+         TueAut.required = false;
+         WedAut.required = false;
+         ThurAut.required = false;
+         FriAut.required = false;
+         SatAut.required = false;
+
+}
+
+if (Artist) {
+
+   artCommitment.expand();
+   artContent.required = true;
+      console.log('Tertiary Position Selected: ARTIST | Expanding ARTIST COMMITMENT CONTAINER 3 \& Requiring artistContent3');
+	  
+	  if (artCommitment.collapsed !== true) {
+         SunArt.required = true;
+         MonArt.required = true;
+         TueArt.required = true;
+         WedArt.required = true;
+         ThurArt.required = true;
+         FriArt.required = true;
+         SatArt.required = true;
+       console.log('Requiring Artist 3 Checkboxes');
+	  }
+
+}
+else {
+	   artCommitment.collapse();
+	   artContent.required = false;
+		 SunArt.required = false;
+         MonArt.required = false;
+         TueArt.required = false;
+         WedArt.required = false;
+         ThurArt.required = false;
+         FriArt.required = false;
+         SatArt.required = false;
+}
+
+if (Vlogger) {
+
+   vlogCommitment.expand();
+   vlogContent.required = true;
+      console.log('Tertiary Position Selected: VLOGGER | Expanding VLOGGER COMMITMENT CONTAINER 3 \& Requiring vloggerContent3');
+	  
+	  if (vlogCommitment.collapsed !== true) {
+         SunVlog.required = true;
+         MonVlog.required = true;
+         TueVlog.required = true;
+         WedVlog.required = true;
+         ThurVlog.required = true;
+         FriVlog.required = true;
+         SatVlog.required = true;
+       console.log('Requiring Vlogger 3 Checkboxes');
+	  }
+
+}
+else {
+	   vlogCommitment.collapse();
+	   vlogContent.required = false;
+		 SunVlog.required = false;
+         MonVlog.required = false;
+         TueVlog.required = false;
+         WedVlog.required = false;
+         ThurVlog.required = false;
+         FriVlog.required = false;
+         SatVlog.required = false;
+}
+
+if (Streamer) {
+
+   strCommitment.expand();
+   strContent.required = true;
+      console.log('Tertiary Position Selected: STREAMER | Expanding STREAMER COMMITMENT CONTAINER 3 \& Requiring streamerContent3');
+	  
+	  if (strCommitment.collapsed !== true) {
+         SunStr.required = true;
+         MonStr.required = true;
+         TueStr.required = true;
+         WedStr.required = true;
+         ThurStr.required = true;
+         FriStr.required = true;
+         SatStr.required = true;
+       console.log('Requiring Streamer 3 Checkboxes');
+	  }
+
+}
+else {
+	   strCommitment.collapse();
+	   strContent.required = false;
+		 SunStr.required = false;
+         MonStr.required = false;
+         TueStr.required = false;
+         WedStr.required = false;
+         ThurStr.required = false;
+         FriStr.required = false;
+         SatStr.required = false;
+}
+
+}
+// TERTIARY POSITION | End
+
+// POSITIONS APPLYING FOR | End
+
+// --------------------------------
+// --------------------------------
+
+// COMMITMENT/AVAILABILITY | Start
+
+// **PRIMARY BOXES** | Start
+
+// FOR ADMINS | Start
+export function admDaySun1_change() {
+if( $w("#admDaySun1").checked) {
+   $w("#admDetailsSun1").expand();
+   $w("#admLengthSun1").required = true;
+   $w("#admStartSun1").required = true;
+}
+else {
+   $w("#admDetailsSun1").collapse();
+   $w("#admLengthSun1").required = false;
+   $w("#admStartSun1").required = false;
+}
+}
+
+export function admDayMon1_change() {
+ if( $w("#admDayMon1").checked) {
+   $w("#admDetailsMon1").expand();
+   $w("#admLengthMon1").required = true;
+   $w("#admStartMon1").required = true;
+}
+else {
+   $w("#admDetailsMon1").collapse();
+   $w("#admLengthMon1").required = false;
+   $w("#admStartMon1").required = false;
+}
+}
+
+export function admDayTue1_change() {
+ if( $w("#admDayTue1").checked) {
+   $w("#admDetailsTue1").expand();
+   $w("#admLengthTue1").required = true;
+   $w("#admStartTue1").required = true;
+}
+else {
+   $w("#admDetailsTue1").collapse();
+   $w("#admLengthTue1").required = false;
+   $w("#admStartTue1").required = false;
+}
+}
+
+export function admDayWed1_change() {
+ if( $w("#admDayWed1").checked) {
+   $w("#admDetailsWed1").expand();
+   $w("#admLengthWed1").required = true;
+   $w("#admStartWed1").required = true;
+}
+else {
+   $w("#admDetailsWed1").collapse();
+   $w("#admLengthWed1").required = false;
+   $w("#admStartWed1").required = false;
+} 
+}
+
+export function admDayThur1_change() {
+ if( $w("#admDayThur1").checked) {
+   $w("#admDetailsThur1").expand();
+   $w("#admLengthThur1").required = true;
+   $w("#admStartThur1").required = true;
+}
+else {
+   $w("#admDetailsThur1").collapse();
+   $w("#admLengthThur1").required = false;
+   $w("#admStartThur1").required = false;
+} 
+}
+
+export function admDayFri1_change() {
+ if( $w("#admDayFri1").checked) {
+   $w("#admDetailsFri1").expand();
+   $w("#admLengthFri1").required = true;
+   $w("#admStartFri1").required = true;
+}
+else {
+   $w("#admDetailsFri1").collapse();
+   $w("#admLengthFri1").required = false;
+   $w("#admStartFri1").required = false;
+} 
+}
+
+export function admDaySat1_change() {
+ if( $w("#admDaySat1").checked) {
+   $w("#admDetailsSat1").expand();
+   $w("#admLengthSat1").required = true;
+   $w("#admStartSat1").required = true;
+}
+else {
+   $w("#admDetailsSat1").collapse();
+   $w("#admLengthSat1").required = false;
+   $w("#admStartSat1").required = false;
+} 
+}
+// FOR ADMINS | End
+
+// FOR AUTHORS | Start
+export function autDaySun1_change() {
+if( $w("#autDaySun1").checked) {
+   $w("#autDetailsSun1").expand();
+   $w("#autTypeSun1").required = true;
+   $w("#autOftenSun1").required = true;
+}
+else {
+   $w("#autDetailsSun1").collapse();
+   $w("#autTypeSun1").required = false;
+   $w("#autOftenSun1").required = false;
+}
+}
+
+export function autDayMon1_change() {
+ if( $w("#autDayMon1").checked) {
+   $w("#autDetailsMon1").expand();
+   $w("#autTypeMon1").required = true;
+   $w("#autOftenMon1").required = true;
+}
+else {
+   $w("#autDetailsMon1").collapse();
+   $w("#autTypeMon1").required = false;
+   $w("#autOftenMon1").required = false;
+}
+}
+
+export function autDayTue1_change() {
+ if( $w("#autDayTue1").checked) {
+   $w("#autDetailsTue1").expand();
+   $w("#autTypeTue1").required = true;
+   $w("#autOftenTue1").required = true;
+}
+else {
+   $w("#autDetailsTue1").collapse();
+   $w("#autTypeTue1").required = false;
+   $w("#autOftenTue1").required = false;
+}
+}
+
+export function autDayWed1_change() {
+ if( $w("#autDayWed1").checked) {
+   $w("#autDetailsWed1").expand();
+   $w("#autTypeWed1").required = true;
+   $w("#autOftenWed1").required = true;
+}
+else {
+   $w("#autDetailsWed1").collapse();
+   $w("#autTypeWed1").required = false;
+   $w("#autOftenWed1").required = false;
+} 
+}
+
+export function autDayThur1_change() {
+ if( $w("#autDayThur1").checked) {
+   $w("#autDetailsThur1").expand();
+   $w("#autTypeThur1").required = true;
+   $w("#autOftenThur1").required = true;
+}
+else {
+   $w("#autDetailsThur1").collapse();
+   $w("#autTypeThur1").required = false;
+   $w("#autOftenThur1").required = false;
+} 
+}
+
+export function autDayFri1_change() {
+ if( $w("#autDayFri1").checked) {
+   $w("#autDetailsFri1").expand();
+   $w("#autTypeFri1").required = true;
+   $w("#autOftenFri1").required = true;
+}
+else {
+   $w("#autDetailsFri1").collapse();
+   $w("#autTypeFri1").required = false;
+   $w("#autOftenFri1").required = false;
+} 
+}
+
+export function autDaySat1_change() {
+ if( $w("#autDaySat1").checked) {
+   $w("#autDetailsSat1").expand();
+   $w("#autTypeSat1").required = true;
+   $w("#autOftenSat1").required = true;
+}
+else {
+   $w("#autDetailsSat1").collapse();
+   $w("#autTypeSat1").required = false;
+   $w("#autOftenSat1").required = false;
+} 
+}
+// FOR AUTHORS | End
+
+// FOR ARTISTS | Start
+export function artDaySun1_change() {
+if( $w("#artDaySun1").checked) {
+   $w("#artDetailsSun1").expand();
+   $w("#artTypeSun1").required = true;
+   $w("#artOftenSun1").required = true;
+}
+else {
+   $w("#artDetailsSun1").collapse();
+   $w("#artTypeSun1").required = false;
+   $w("#artOftenSun1").required = false;
+}
+}
+
+export function artDayMon1_change() {
+ if( $w("#artDayMon1").checked) {
+   $w("#artDetailsMon1").expand();
+   $w("#artTypeMon1").required = true;
+   $w("#artOftenMon1").required = true;
+}
+else {
+   $w("#artDetailsMon1").collapse();
+   $w("#artTypeMon1").required = false;
+   $w("#artOftenMon1").required = false;
+}
+}
+
+export function artDayTue1_change() {
+ if( $w("#artDayTue1").checked) {
+   $w("#artDetailsTue1").expand();
+   $w("#artTypeTue1").required = true;
+   $w("#artOftenTue1").required = true;
+}
+else {
+   $w("#artDetailsTue1").collapse();
+   $w("#artTypeTue1").required = false;
+   $w("#artOftenTue1").required = false;
+}
+}
+
+export function artDayWed1_change() {
+ if( $w("#artDayWed1").checked) {
+   $w("#artDetailsWed1").expand();
+   $w("#artTypeWed1").required = true;
+   $w("#artOftenWed1").required = true;
+}
+else {
+   $w("#artDetailsWed1").collapse();
+   $w("#artTypeWed1").required = false;
+   $w("#artOftenWed1").required = false;
+} 
+}
+
+export function artDayThur1_change() {
+ if( $w("#artDayThur1").checked) {
+   $w("#artDetailsThur1").expand();
+   $w("#artTypeThur1").required = true;
+   $w("#artOftenThur1").required = true;
+}
+else {
+   $w("#artDetailsThur1").collapse();
+   $w("#artTypeThur1").required = false;
+   $w("#artOftenThur1").required = false;
+} 
+}
+
+export function artDayFri1_change() {
+ if( $w("#artDayFri1").checked) {
+   $w("#artDetailsFri1").expand();
+   $w("#artTypeFri1").required = true;
+   $w("#artOftenFri1").required = true;
+}
+else {
+   $w("#artDetailsFri1").collapse();
+   $w("#artTypeFri1").required = false;
+   $w("#artOftenFri1").required = false;
+} 
+}
+
+export function artDaySat1_change() {
+ if( $w("#artDaySat1").checked) {
+   $w("#artDetailsSat1").expand();
+   $w("#artTypeSat1").required = true;
+   $w("#artOftenSat1").required = true;
+}
+else {
+   $w("#artDetailsSat1").collapse();
+   $w("#artTypeSat1").required = false;
+   $w("#artOftenSat1").required = false;
+} 
+}
+// FOR ARTISTS | End
+
+// FOR VLOGGERS | Start
+export function vlogDaySun1_change() {
+if( $w("#vlogDaySun1").checked) {
+   $w("#vlogOftenSun1").expand();
+   $w("#vlogOftenSun1").required = true;
+}
+else {
+   $w("#vlogOftenSun1").collapse();
+   $w("#vlogOftenSun1").required = false;
+}
+}
+
+export function vlogDayMon1_change() {
+ if( $w("#vlogDayMon1").checked) {
+   $w("#vlogOftenMon1").expand();
+   $w("#vlogOftenMon1").required = true;
+}
+else {
+   $w("#vlogOftenMon1").collapse();
+   $w("#vlogOftenMon1").required = false;
+}
+}
+
+export function vlogDayTue1_change() {
+ if( $w("#vlogDayTue1").checked) {
+   $w("#vlogOftenTue1").expand();
+   $w("#vlogOftenTue1").required = true;
+}
+else {
+   $w("#vlogOftenTue1").collapse();
+   $w("#vlogOftenTue1").required = false;
+}
+}
+
+export function vlogDayWed1_change() {
+ if( $w("#vlogDayWed1").checked) {
+   $w("#vlogOftenWed1").expand();
+   $w("#vlogOftenWed1").required = true;
+}
+else {
+   $w("#vlogOftenWed1").collapse();
+   $w("#vlogOftenWed1").required = false;
+} 
+}
+
+export function vlogDayThur1_change() {
+ if( $w("#vlogDayThur1").checked) {
+   $w("#vlogOftenThur1").expand();
+   $w("#vlogOftenThur1").required = true;
+}
+else {
+   $w("#vlogOftenThur1").collapse();
+   $w("#vlogOftenThur1").required = false;
+} 
+}
+
+export function vlogDayFri1_change() {
+ if( $w("#vlogDayFri1").checked) {
+   $w("#vlogOftenFri1").expand();
+   $w("#vlogOftenFri1").required = true;
+}
+else {
+   $w("#vlogOftenFri1").collapse();
+   $w("#vlogOftenFri1").required = false;
+} 
+}
+
+export function vlogDaySat1_change() {
+ if( $w("#vlogDaySat1").checked) {
+   $w("#vlogOftenSat1").expand();
+   $w("#vlogOftenSat1").required = true;
+}
+else {
+   $w("#vlogOftenSat1").collapse();
+   $w("#vlogOftenSat1").required = false;
+} 
+}
+// FOR VLOGGERS | End
+
+// FOR STREAMERS | Start
+export function strDaySun1_change() {
+if( $w("#strDaySun1").checked) {
+   $w("#strDetailsSun1").expand();
+   $w("#strLengthSun1").required = true;
+   $w("#strStartSun1").required = true;
+}
+else {
+   $w("#strDetailsSun1").collapse();
+   $w("#strLengthSun1").required = false;
+   $w("#strStartSun1").required = false;
+}
+}
+
+export function strDayMon1_change() {
+ if( $w("#strDayMon1").checked) {
+   $w("#strDetailsMon1").expand();
+   $w("#strLengthMon1").required = true;
+   $w("#strStartMon1").required = true;
+}
+else {
+   $w("#strDetailsMon1").collapse();
+   $w("#strLengthMon1").required = false;
+   $w("#strStartMon1").required = false;
+}
+}
+
+export function strDayTue1_change() {
+ if( $w("#strDayTue1").checked) {
+   $w("#strDetailsTue1").expand();
+   $w("#strLengthTue1").required = true;
+   $w("#strStartTue1").required = true;
+}
+else {
+   $w("#strDetailsTue1").collapse();
+   $w("#strLengthTue1").required = false;
+   $w("#strStartTue1").required = false;
+}
+}
+
+export function strDayWed1_change() {
+ if( $w("#strDayWed1").checked) {
+   $w("#strDetailsWed1").expand();
+   $w("#strLengthWed1").required = true;
+   $w("#strStartWed1").required = true;
+}
+else {
+   $w("#strDetailsWed1").collapse();
+   $w("#strLengthWed1").required = false;
+   $w("#strStartWed1").required = false;
+} 
+}
+
+export function strDayThur1_change() {
+ if( $w("#strDayThur1").checked) {
+   $w("#strDetailsThur1").expand();
+   $w("#strLengthThur1").required = true;
+   $w("#strStartThur1").required = true;
+}
+else {
+   $w("#strDetailsThur1").collapse();
+   $w("#strLengthThur1").required = false;
+   $w("#strStartThur1").required = false;
+} 
+}
+
+export function strDayFri1_change() {
+ if( $w("#strDayFri1").checked) {
+   $w("#strDetailsFri1").expand();
+   $w("#strLengthFri1").required = true;
+   $w("#strStartFri1").required = true;
+}
+else {
+   $w("#strDetailsFri1").collapse();
+   $w("#strLengthFri1").required = false;
+   $w("#strStartFri1").required = false;
+} 
+}
+
+export function strDaySat1_change() {
+ if( $w("#strDaySat1").checked) {
+   $w("#strDetailsSat1").expand();
+   $w("#strLengthSat1").required = true;
+   $w("#strStartSat1").required = true;
+}
+else {
+   $w("#strDetailsSat1").collapse();
+   $w("#strLengthSat1").required = false;
+   $w("#strStartSat1").required = false;
+} 
+}
+// FOR STREAMERS | End
+
+// **PRIMARY BOXES** | End
+
+
+
+// **SECONDARY BOXES** | Start
+
+// FOR ADMINS | Start
+export function admDaySun2_change() {
+if( $w("#admDaySun2").checked) {
+   $w("#admDetailsSun2").expand();
+   $w("#admLengthSun2").required = true;
+   $w("#admStartSun2").required = true;
+}
+else {
+   $w("#admDetailsSun2").collapse();
+   $w("#admLengthSun2").required = false;
+   $w("#admStartSun2").required = false;
+}
+}
+
+export function admDayMon2_change() {
+ if( $w("#admDayMon2").checked) {
+   $w("#admDetailsMon2").expand();
+   $w("#admLengthMon2").required = true;
+   $w("#admStartMon2").required = true;
+}
+else {
+   $w("#admDetailsMon2").collapse();
+   $w("#admLengthMon2").required = false;
+   $w("#admStartMon2").required = false;
+}
+}
+
+export function admDayTue2_change() {
+ if( $w("#admDayTue2").checked) {
+   $w("#admDetailsTue2").expand();
+   $w("#admLengthTue2").required = true;
+   $w("#admStartTue2").required = true;
+}
+else {
+   $w("#admDetailsTue2").collapse();
+   $w("#admLengthTue2").required = false;
+   $w("#admStartTue2").required = false;
+}
+}
+
+export function admDayWed2_change() {
+ if( $w("#admDayWed2").checked) {
+   $w("#admDetailsWed2").expand();
+   $w("#admLengthWed2").required = true;
+   $w("#admStartWed2").required = true;
+}
+else {
+   $w("#admDetailsWed2").collapse();
+   $w("#admLengthWed2").required = false;
+   $w("#admStartWed2").required = false;
+} 
+}
+
+export function admDayThur2_change() {
+ if( $w("#admDayThur2").checked) {
+   $w("#admDetailsThur2").expand();
+   $w("#admLengthThur2").required = true;
+   $w("#admStartThur2").required = true;
+}
+else {
+   $w("#admDetailsThur2").collapse();
+   $w("#admLengthThur2").required = false;
+   $w("#admStartThur2").required = false;
+} 
+}
+
+export function admDayFri2_change() {
+ if( $w("#admDayFri2").checked) {
+   $w("#admDetailsFri2").expand();
+   $w("#admLengthFri2").required = true;
+   $w("#admStartFri2").required = true;
+}
+else {
+   $w("#admDetailsFri2").collapse();
+   $w("#admLengthFri2").required = false;
+   $w("#admStartFri2").required = false;
+} 
+}
+
+export function admDaySat2_change() {
+ if( $w("#admDaySat2").checked) {
+   $w("#admDetailsSat2").expand();
+   $w("#admLengthSat2").required = true;
+   $w("#admStartSat2").required = true;
+}
+else {
+   $w("#admDetailsSat2").collapse();
+   $w("#admLengthSat2").required = false;
+   $w("#admStartSat2").required = false;
+} 
+}
+// FOR ADMINS | End
+
+// FOR AUTHORS | Start
+export function autDaySun2_change() {
+if( $w("#autDaySun2").checked) {
+   $w("#autDetailsSun2").expand();
+   $w("#autTypeSun2").required = true;
+   $w("#autOftenSun2").required = true;
+}
+else {
+   $w("#autDetailsSun2").collapse();
+   $w("#autTypeSun2").required = false;
+   $w("#autOftenSun2").required = false;
+}
+}
+
+export function autDayMon2_change() {
+ if( $w("#autDayMon2").checked) {
+   $w("#autDetailsMon2").expand();
+   $w("#autTypeMon2").required = true;
+   $w("#autOftenMon2").required = true;
+}
+else {
+   $w("#autDetailsMon2").collapse();
+   $w("#autTypeMon2").required = false;
+   $w("#autOftenMon2").required = false;
+}
+}
+
+export function autDayTue2_change() {
+ if( $w("#autDayTue2").checked) {
+   $w("#autDetailsTue2").expand();
+   $w("#autTypeTue2").required = true;
+   $w("#autOftenTue2").required = true;
+}
+else {
+   $w("#autDetailsTue2").collapse();
+   $w("#autTypeTue2").required = false;
+   $w("#autOftenTue2").required = false;
+}
+}
+
+export function autDayWed2_change() {
+ if( $w("#autDayWed2").checked) {
+   $w("#autDetailsWed2").expand();
+   $w("#autTypeWed2").required = true;
+   $w("#autOftenWed2").required = true;
+}
+else {
+   $w("#autDetailsWed2").collapse();
+   $w("#autTypeWed2").required = false;
+   $w("#autOftenWed2").required = false;
+} 
+}
+
+export function autDayThur2_change() {
+ if( $w("#autDayThur2").checked) {
+   $w("#autDetailsThur2").expand();
+   $w("#autTypeThur2").required = true;
+   $w("#autOftenThur2").required = true;
+}
+else {
+   $w("#autDetailsThur2").collapse();
+   $w("#autTypeThur2").required = false;
+   $w("#autOftenThur2").required = false;
+} 
+}
+
+export function autDayFri2_change() {
+ if( $w("#autDayFri2").checked) {
+   $w("#autDetailsFri2").expand();
+   $w("#autTypeFri2").required = true;
+   $w("#autOftenFri2").required = true;
+}
+else {
+   $w("#autDetailsFri2").collapse();
+   $w("#autTypeFri2").required = false;
+   $w("#autOftenFri2").required = false;
+} 
+}
+
+export function autDaySat2_change() {
+ if( $w("#autDaySat2").checked) {
+   $w("#autDetailsSat2").expand();
+   $w("#autTypeSat2").required = true;
+   $w("#autOftenSat2").required = true;
+}
+else {
+   $w("#autDetailsSat2").collapse();
+   $w("#autTypeSat2").required = false;
+   $w("#autOftenSat2").required = false;
+} 
+}
+// FOR AUTHORS | End
+
+// FOR ARTISTS | Start
+export function artDaySun2_change() {
+if( $w("#artDaySun2").checked) {
+   $w("#artDetailsSun2").expand();
+   $w("#artTypeSun2").required = true;
+   $w("#artOftenSun2").required = true;
+}
+else {
+   $w("#artDetailsSun2").collapse();
+   $w("#artTypeSun2").required = false;
+   $w("#artOftenSun2").required = false;
+}
+}
+
+export function artDayMon2_change() {
+ if( $w("#artDayMon2").checked) {
+   $w("#artDetailsMon2").expand();
+   $w("#artTypeMon2").required = true;
+   $w("#artOftenMon2").required = true;
+}
+else {
+   $w("#artDetailsMon2").collapse();
+   $w("#artTypeMon2").required = false;
+   $w("#artOftenMon2").required = false;
+}
+}
+
+export function artDayTue2_change() {
+ if( $w("#artDayTue2").checked) {
+   $w("#artDetailsTue2").expand();
+   $w("#artTypeTue2").required = true;
+   $w("#artOftenTue2").required = true;
+}
+else {
+   $w("#artDetailsTue2").collapse();
+   $w("#artTypeTue2").required = false;
+   $w("#artOftenTue2").required = false;
+}
+}
+
+export function artDayWed2_change() {
+ if( $w("#artDayWed2").checked) {
+   $w("#artDetailsWed2").expand();
+   $w("#artTypeWed2").required = true;
+   $w("#artOftenWed2").required = true;
+}
+else {
+   $w("#artDetailsWed2").collapse();
+   $w("#artTypeWed2").required = false;
+   $w("#artOftenWed2").required = false;
+} 
+}
+
+export function artDayThur2_change() {
+ if( $w("#artDayThur2").checked) {
+   $w("#artDetailsThur2").expand();
+   $w("#artTypeThur2").required = true;
+   $w("#artOftenThur2").required = true;
+}
+else {
+   $w("#artDetailsThur2").collapse();
+   $w("#artTypeThur2").required = false;
+   $w("#artOftenThur2").required = false;
+} 
+}
+
+export function artDayFri2_change() {
+ if( $w("#artDayFri2").checked) {
+   $w("#artDetailsFri2").expand();
+   $w("#artTypeFri2").required = true;
+   $w("#artOftenFri2").required = true;
+}
+else {
+   $w("#artDetailsFri2").collapse();
+   $w("#artTypeFri2").required = false;
+   $w("#artOftenFri2").required = false;
+} 
+}
+
+export function artDaySat2_change() {
+ if( $w("#artDaySat2").checked) {
+   $w("#artDetailsSat2").expand();
+   $w("#artTypeSat2").required = true;
+   $w("#artOftenSat2").required = true;
+}
+else {
+   $w("#artDetailsSat2").collapse();
+   $w("#artTypeSat2").required = false;
+   $w("#artOftenSat2").required = false;
+} 
+}
+// FOR ARTISTS | End
+
+// FOR VLOGGERS | Start
+export function vlogDaySun2_change() {
+if( $w("#vlogDaySun2").checked) {
+   $w("#vlogOftenSun2").expand();
+   $w("#vlogOftenSun2").required = true;
+}
+else {
+   $w("#vlogOftenSun2").collapse();
+   $w("#vlogOftenSun2").required = false;
+}
+}
+
+export function vlogDayMon2_change() {
+ if( $w("#vlogDayMon2").checked) {
+   $w("#vlogOftenMon2").expand();
+   $w("#vlogOftenMon2").required = true;
+}
+else {
+   $w("#vlogOftenMon2").collapse();
+   $w("#vlogOftenMon2").required = false;
+}
+}
+
+export function vlogDayTue2_change() {
+ if( $w("#vlogDayTue2").checked) {
+   $w("#vlogOftenTue2").expand();
+   $w("#vlogOftenTue2").required = true;
+}
+else {
+   $w("#vlogOftenTue2").collapse();
+   $w("#vlogOftenTue2").required = false;
+}
+}
+
+export function vlogDayWed2_change() {
+ if( $w("#vlogDayWed2").checked) {
+   $w("#vlogOftenWed2").expand();
+   $w("#vlogOftenWed2").required = true;
+}
+else {
+   $w("#vlogOftenWed2").collapse();
+   $w("#vlogOftenWed2").required = false;
+} 
+}
+
+export function vlogDayThur2_change() {
+ if( $w("#vlogDayThur2").checked) {
+   $w("#vlogOftenThur2").expand();
+   $w("#vlogOftenThur2").required = true;
+}
+else {
+   $w("#vlogOftenThur2").collapse();
+   $w("#vlogOftenThur2").required = false;
+} 
+}
+
+export function vlogDayFri2_change() {
+ if( $w("#vlogDayFri2").checked) {
+   $w("#vlogOftenFri2").expand();
+   $w("#vlogOftenFri2").required = true;
+}
+else {
+   $w("#vlogOftenFri2").collapse();
+   $w("#vlogOftenFri2").required = false;
+} 
+}
+
+export function vlogDaySat2_change() {
+ if( $w("#vlogDaySat2").checked) {
+   $w("#vlogOftenSat2").expand();
+   $w("#vlogOftenSat2").required = true;
+}
+else {
+   $w("#vlogOftenSat2").collapse();
+   $w("#vlogOftenSat2").required = false;
+} 
+}
+// FOR VLOGGERS | End
+
+// FOR STREAMERS | Start
+export function strDaySun2_change() {
+if( $w("#strDaySun2").checked) {
+   $w("#strDetailsSun2").expand();
+   $w("#strLengthSun2").required = true;
+   $w("#strStartSun2").required = true;
+}
+else {
+   $w("#strDetailsSun2").collapse();
+   $w("#strLengthSun2").required = false;
+   $w("#strStartSun2").required = false;
+}
+}
+
+export function strDayMon2_change() {
+ if( $w("#strDayMon2").checked) {
+   $w("#strDetailsMon2").expand();
+   $w("#strLengthMon2").required = true;
+   $w("#strStartMon2").required = true;
+}
+else {
+   $w("#strDetailsMon2").collapse();
+   $w("#strLengthMon2").required = false;
+   $w("#strStartMon2").required = false;
+}
+}
+
+export function strDayTue2_change() {
+ if( $w("#strDayTue2").checked) {
+   $w("#strDetailsTue2").expand();
+   $w("#strLengthTue2").required = true;
+   $w("#strStartTue2").required = true;
+}
+else {
+   $w("#strDetailsTue2").collapse();
+   $w("#strLengthTue2").required = false;
+   $w("#strStartTue2").required = false;
+}
+}
+
+export function strDayWed2_change() {
+ if( $w("#strDayWed2").checked) {
+   $w("#strDetailsWed2").expand();
+   $w("#strLengthWed2").required = true;
+   $w("#strStartWed2").required = true;
+}
+else {
+   $w("#strDetailsWed2").collapse();
+   $w("#strLengthWed2").required = false;
+   $w("#strStartWed2").required = false;
+} 
+}
+
+export function strDayThur2_change() {
+ if( $w("#strDayThur2").checked) {
+   $w("#strDetailsThur2").expand();
+   $w("#strLengthThur2").required = true;
+   $w("#strStartThur2").required = true;
+}
+else {
+   $w("#strDetailsThur2").collapse();
+   $w("#strLengthThur2").required = false;
+   $w("#strStartThur2").required = false;
+} 
+}
+
+export function strDayFri2_change() {
+ if( $w("#strDayFri2").checked) {
+   $w("#strDetailsFri2").expand();
+   $w("#strLengthFri2").required = true;
+   $w("#strStartFri2").required = true;
+}
+else {
+   $w("#strDetailsFri2").collapse();
+   $w("#strLengthFri2").required = false;
+   $w("#strStartFri2").required = false;
+} 
+}
+
+export function strDaySat2_change() {
+ if( $w("#strDaySat2").checked) {
+   $w("#strDetailsSat2").expand();
+   $w("#strLengthSat2").required = true;
+   $w("#strStartSat2").required = true;
+}
+else {
+   $w("#strDetailsSat2").collapse();
+   $w("#strLengthSat2").required = false;
+   $w("#strStartSat2").required = false;
+} 
+}
+// FOR STREAMERS | End
+
+// **SECONDARY BOXES** | End
+
+
+
+// **TERTIARY BOXES** | Start
+
+// FOR ADMINS | Start
+export function admDaySun3_change() {
+if( $w("#admDaySun3").checked) {
+   $w("#admDetailsSun3").expand();
+   $w("#admLengthSun3").required = true;
+   $w("#admStartSun3").required = true;
+}
+else {
+   $w("#admDetailsSun3").collapse();
+   $w("#admLengthSun3").required = false;
+   $w("#admStartSun3").required = false;
+}
+}
+
+export function admDayMon3_change() {
+ if( $w("#admDayMon3").checked) {
+   $w("#admDetailsMon3").expand();
+   $w("#admLengthMon3").required = true;
+   $w("#admStartMon3").required = true;
+}
+else {
+   $w("#admDetailsMon3").collapse();
+   $w("#admLengthMon3").required = false;
+   $w("#admStartMon3").required = false;
+}
+}
+
+export function admDayTue3_change() {
+ if( $w("#admDayTue3").checked) {
+   $w("#admDetailsTue3").expand();
+   $w("#admLengthTue3").required = true;
+   $w("#admStartTue3").required = true;
+}
+else {
+   $w("#admDetailsTue3").collapse();
+   $w("#admLengthTue3").required = false;
+   $w("#admStartTue3").required = false;
+}
+}
+
+export function admDayWed3_change() {
+ if( $w("#admDayWed3").checked) {
+   $w("#admDetailsWed3").expand();
+   $w("#admLengthWed3").required = true;
+   $w("#admStartWed3").required = true;
+}
+else {
+   $w("#admDetailsWed3").collapse();
+   $w("#admLengthWed3").required = false;
+   $w("#admStartWed3").required = false;
+} 
+}
+
+export function admDayThur3_change() {
+ if( $w("#admDayThur3").checked) {
+   $w("#admDetailsThur3").expand();
+   $w("#admLengthThur3").required = true;
+   $w("#admStartThur3").required = true;
+}
+else {
+   $w("#admDetailsThur3").collapse();
+   $w("#admLengthThur3").required = false;
+   $w("#admStartThur3").required = false;
+} 
+}
+
+export function admDayFri3_change() {
+ if( $w("#admDayFri3").checked) {
+   $w("#admDetailsFri3").expand();
+   $w("#admLengthFri3").required = true;
+   $w("#admStartFri3").required = true;
+}
+else {
+   $w("#admDetailsFri3").collapse();
+   $w("#admLengthFri3").required = false;
+   $w("#admStartFri3").required = false;
+} 
+}
+
+export function admDaySat3_change() {
+ if( $w("#admDaySat3").checked) {
+   $w("#admDetailsSat3").expand();
+   $w("#admLengthSat3").required = true;
+   $w("#admStartSat3").required = true;
+}
+else {
+   $w("#admDetailsSat3").collapse();
+   $w("#admLengthSat3").required = false;
+   $w("#admStartSat3").required = false;
+} 
+}
+// FOR ADMINS | End
+
+// FOR AUTHORS | Start
+export function autDaySun3_change() {
+if( $w("#autDaySun3").checked) {
+   $w("#autDetailsSun3").expand();
+   $w("#autTypeSun3").required = true;
+   $w("#autOftenSun3").required = true;
+}
+else {
+   $w("#autDetailsSun3").collapse();
+   $w("#autTypeSun3").required = false;
+   $w("#autOftenSun3").required = false;
+}
+}
+
+export function autDayMon3_change() {
+ if( $w("#autDayMon3").checked) {
+   $w("#autDetailsMon3").expand();
+   $w("#autTypeMon3").required = true;
+   $w("#autOftenMon3").required = true;
+}
+else {
+   $w("#autDetailsMon3").collapse();
+   $w("#autTypeMon3").required = false;
+   $w("#autOftenMon3").required = false;
+}
+}
+
+export function autDayTue3_change() {
+ if( $w("#autDayTue3").checked) {
+   $w("#autDetailsTue3").expand();
+   $w("#autTypeTue3").required = true;
+   $w("#autOftenTue3").required = true;
+}
+else {
+   $w("#autDetailsTue3").collapse();
+   $w("#autTypeTue3").required = false;
+   $w("#autOftenTue3").required = false;
+}
+}
+
+export function autDayWed3_change() {
+ if( $w("#autDayWed3").checked) {
+   $w("#autDetailsWed3").expand();
+   $w("#autTypeWed3").required = true;
+   $w("#autOftenWed3").required = true;
+}
+else {
+   $w("#autDetailsWed3").collapse();
+   $w("#autTypeWed3").required = false;
+   $w("#autOftenWed3").required = false;
+} 
+}
+
+export function autDayThur3_change() {
+ if( $w("#autDayThur3").checked) {
+   $w("#autDetailsThur3").expand();
+   $w("#autTypeThur3").required = true;
+   $w("#autOftenThur3").required = true;
+}
+else {
+   $w("#autDetailsThur3").collapse();
+   $w("#autTypeThur3").required = false;
+   $w("#autOftenThur3").required = false;
+} 
+}
+
+export function autDayFri3_change() {
+ if( $w("#autDayFri3").checked) {
+   $w("#autDetailsFri3").expand();
+   $w("#autTypeFri3").required = true;
+   $w("#autOftenFri3").required = true;
+}
+else {
+   $w("#autDetailsFri3").collapse();
+   $w("#autTypeFri3").required = false;
+   $w("#autOftenFri3").required = false;
+} 
+}
+
+export function autDaySat3_change() {
+ if( $w("#autDaySat3").checked) {
+   $w("#autDetailsSat3").expand();
+   $w("#autTypeSat3").required = true;
+   $w("#autOftenSat3").required = true;
+}
+else {
+   $w("#autDetailsSat3").collapse();
+   $w("#autTypeSat3").required = false;
+   $w("#autOftenSat3").required = false;
+} 
+}
+// FOR AUTHORS | End
+
+// FOR ARTISTS | Start
+export function artDaySun3_change() {
+if( $w("#artDaySun3").checked) {
+   $w("#artDetailsSun3").expand();
+   $w("#artTypeSun3").required = true;
+   $w("#artOftenSun3").required = true;
+}
+else {
+   $w("#artDetailsSun3").collapse();
+   $w("#artTypeSun3").required = false;
+   $w("#artOftenSun3").required = false;
+}
+}
+
+export function artDayMon3_change() {
+ if( $w("#artDayMon3").checked) {
+   $w("#artDetailsMon3").expand();
+   $w("#artTypeMon3").required = true;
+   $w("#artOftenMon3").required = true;
+}
+else {
+   $w("#artDetailsMon3").collapse();
+   $w("#artTypeMon3").required = false;
+   $w("#artOftenMon3").required = false;
+}
+}
+
+export function artDayTue3_change() {
+ if( $w("#artDayTue3").checked) {
+   $w("#artDetailsTue3").expand();
+   $w("#artTypeTue3").required = true;
+   $w("#artOftenTue3").required = true;
+}
+else {
+   $w("#artDetailsTue3").collapse();
+   $w("#artTypeTue3").required = false;
+   $w("#artOftenTue3").required = false;
+}
+}
+
+export function artDayWed3_change() {
+ if( $w("#artDayWed3").checked) {
+   $w("#artDetailsWed3").expand();
+   $w("#artTypeWed3").required = true;
+   $w("#artOftenWed3").required = true;
+}
+else {
+   $w("#artDetailsWed3").collapse();
+   $w("#artTypeWed3").required = false;
+   $w("#artOftenWed3").required = false;
+} 
+}
+
+export function artDayThur3_change() {
+ if( $w("#artDayThur3").checked) {
+   $w("#artDetailsThur3").expand();
+   $w("#artTypeThur3").required = true;
+   $w("#artOftenThur3").required = true;
+}
+else {
+   $w("#artDetailsThur3").collapse();
+   $w("#artTypeThur3").required = false;
+   $w("#artOftenThur3").required = false;
+} 
+}
+
+export function artDayFri3_change() {
+ if( $w("#artDayFri3").checked) {
+   $w("#artDetailsFri3").expand();
+   $w("#artTypeFri3").required = true;
+   $w("#artOftenFri3").required = true;
+}
+else {
+   $w("#artDetailsFri3").collapse();
+   $w("#artTypeFri3").required = false;
+   $w("#artOftenFri3").required = false;
+} 
+}
+
+export function artDaySat3_change() {
+ if( $w("#artDaySat3").checked) {
+   $w("#artDetailsSat3").expand();
+   $w("#artTypeSat3").required = true;
+   $w("#artOftenSat3").required = true;
+}
+else {
+   $w("#artDetailsSat3").collapse();
+   $w("#artTypeSat3").required = false;
+   $w("#artOftenSat3").required = false;
+} 
+}
+// FOR ARTISTS | End
+
+// FOR VLOGGERS | Start
+export function vlogDaySun3_change() {
+if( $w("#vlogDaySun3").checked) {
+   $w("#vlogOftenSun3").expand();
+   $w("#vlogOftenSun3").required = true;
+}
+else {
+   $w("#vlogOftenSun3").collapse();
+   $w("#vlogOftenSun3").required = false;
+}
+}
+
+export function vlogDayMon3_change() {
+ if( $w("#vlogDayMon3").checked) {
+   $w("#vlogOftenMon3").expand();
+   $w("#vlogOftenMon3").required = true;
+}
+else {
+   $w("#vlogOftenMon3").collapse();
+   $w("#vlogOftenMon3").required = false;
+}
+}
+
+export function vlogDayTue3_change() {
+ if( $w("#vlogDayTue3").checked) {
+   $w("#vlogOftenTue3").expand();
+   $w("#vlogOftenTue3").required = true;
+}
+else {
+   $w("#vlogOftenTue3").collapse();
+   $w("#vlogOftenTue3").required = false;
+}
+}
+
+export function vlogDayWed3_change() {
+ if( $w("#vlogDayWed3").checked) {
+   $w("#vlogOftenWed3").expand();
+   $w("#vlogOftenWed3").required = true;
+}
+else {
+   $w("#vlogOftenWed3").collapse();
+   $w("#vlogOftenWed3").required = false;
+} 
+}
+
+export function vlogDayThur3_change() {
+ if( $w("#vlogDayThur3").checked) {
+   $w("#vlogOftenThur3").expand();
+   $w("#vlogOftenThur3").required = true;
+}
+else {
+   $w("#vlogOftenThur3").collapse();
+   $w("#vlogOftenThur3").required = false;
+} 
+}
+
+export function vlogDayFri3_change() {
+ if( $w("#vlogDayFri3").checked) {
+   $w("#vlogOftenFri3").expand();
+   $w("#vlogOftenFri3").required = true;
+}
+else {
+   $w("#vlogOftenFri3").collapse();
+   $w("#vlogOftenFri3").required = false;
+} 
+}
+
+export function vlogDaySat3_change() {
+ if( $w("#vlogDaySat3").checked) {
+   $w("#vlogOftenSat3").expand();
+   $w("#vlogOftenSat3").required = true;
+}
+else {
+   $w("#vlogOftenSat3").collapse();
+   $w("#vlogOftenSat3").required = false;
+} 
+}
+// FOR VLOGGERS | End
+
+// FOR STREAMERS | Start
+export function strDaySun3_change() {
+if( $w("#strDaySun3").checked) {
+   $w("#strDetailsSun3").expand();
+   $w("#strLengthSun3").required = true;
+   $w("#strStartSun3").required = true;
+}
+else {
+   $w("#strDetailsSun3").collapse();
+   $w("#strLengthSun3").required = false;
+   $w("#strStartSun3").required = false;
+}
+}
+
+export function strDayMon3_change() {
+ if( $w("#strDayMon3").checked) {
+   $w("#strDetailsMon3").expand();
+   $w("#strLengthMon3").required = true;
+   $w("#strStartMon3").required = true;
+}
+else {
+   $w("#strDetailsMon3").collapse();
+   $w("#strLengthMon3").required = false;
+   $w("#strStartMon3").required = false;
+}
+}
+
+export function strDayTue3_change() {
+ if( $w("#strDayTue3").checked) {
+   $w("#strDetailsTue3").expand();
+   $w("#strLengthTue3").required = true;
+   $w("#strStartTue3").required = true;
+}
+else {
+   $w("#strDetailsTue3").collapse();
+   $w("#strLengthTue3").required = false;
+   $w("#strStartTue3").required = false;
+}
+}
+
+export function strDayWed3_change() {
+ if( $w("#strDayWed3").checked) {
+   $w("#strDetailsWed3").expand();
+   $w("#strLengthWed3").required = true;
+   $w("#strStartWed3").required = true;
+}
+else {
+   $w("#strDetailsWed3").collapse();
+   $w("#strLengthWed3").required = false;
+   $w("#strStartWed3").required = false;
+} 
+}
+
+export function strDayThur3_change() {
+ if( $w("#strDayThur3").checked) {
+   $w("#strDetailsThur3").expand();
+   $w("#strLengthThur3").required = true;
+   $w("#strStartThur3").required = true;
+}
+else {
+   $w("#strDetailsThur3").collapse();
+   $w("#strLengthThur3").required = false;
+   $w("#strStartThur3").required = false;
+} 
+}
+
+export function strDayFri3_change() {
+ if( $w("#strDayFri3").checked) {
+   $w("#strDetailsFri3").expand();
+   $w("#strLengthFri3").required = true;
+   $w("#strStartFri3").required = true;
+}
+else {
+   $w("#strDetailsFri3").collapse();
+   $w("#strLengthFri3").required = false;
+   $w("#strStartFri3").required = false;
+} 
+}
+
+export function strDaySat3_change() {
+ if( $w("#strDaySat3").checked) {
+   $w("#strDetailsSat3").expand();
+   $w("#strLengthSat3").required = true;
+   $w("#strStartSat3").required = true;
+}
+else {
+   $w("#strDetailsSat3").collapse();
+   $w("#strLengthSat3").required = false;
+   $w("#strStartSat3").required = false;
+} 
+}
+// FOR STREAMERS | End
+
+// **TERTIARY BOXES** | End
+
+// COMMITMENT/AVAILABILITY | End
+
