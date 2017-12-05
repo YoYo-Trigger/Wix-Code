@@ -254,7 +254,7 @@ let SecondaryChoices = $w("#SecondaryChoices");
 let TertiaryChoices = $w("#TertiaryChoices");
 
 let admCommitment = $w("#adminCommitment2");
-
+let autCommitment = $w("#authorCommitment2");
 let artCommitment = $w("#artistCommitment2");
 let vlogCommitment = $w("#vloggerCommitment2");
 let strCommitment = $w("#streamerCommitment2");
@@ -264,7 +264,6 @@ let artContent = $w("#artistContent2");
 let vlogContent = $w("#vloggerContent2");
 let strContent = $w("#streamerContent2");
 
-let None = (SecondaryChoices.value === "None");
 let Admin = (SecondaryChoices.value === "Admin");
 let Author = (SecondaryChoices.value === "Author");
 let Artist = (SecondaryChoices.value === "Artist");
@@ -726,451 +725,648 @@ else {
 
 // FOR ADMINS | Start
 export function admDaySun1_change() {
-if( $w("#admDaySun1").checked) {
-   $w("#admDetailsSun1").expand();
-   $w("#admLengthSun1").required = true;
-   $w("#admStartSun1").required = true;
+let SunAdm = $w("#admDaySun1");
+let SunAdmDet = $w("#admDetailsSun1");
+let SunAdmLen = $w("#admDetailsSun1");
+let SunAdmSta = $w("#admStartSun1");
+
+if( SunAdm.checked) {
+   SunAdmDet.expand();
+   SunAdmLen.required = true;
+   SunAdmSta.required = true;
+     console.log('Expanding Sun Adm Details 1 \& Requiring Sun Length and Start Time');
 }
 else {
-   $w("#admDetailsSun1").collapse();
-   $w("#admLengthSun1").required = false;
-   $w("#admStartSun1").required = false;
+   SunAdmDet.collapse();
+   SunAdmLen.required = false;
+   SunAdmSta.required = false;
 }
 }
 
 export function admDayMon1_change() {
- if( $w("#admDayMon1").checked) {
-   $w("#admDetailsMon1").expand();
-   $w("#admLengthMon1").required = true;
-   $w("#admStartMon1").required = true;
+let MonAdm = $w("#admDayMon1");
+let MonAdmDet = $w("#admDetailsMon1");
+let MonAdmLen = $w("#admLengthMon1");
+let MonAdmSta = $w("#admStartMon1");
+
+ if(MonAdm.checked) {
+   MonAdmDet.expand();
+   MonAdmLen.required = true;
+   MonAdmSta.required = true;
+     console.log('Expanding Mon Adm Details 1 \& Requiring Mon Length and Start Time');
 }
 else {
-   $w("#admDetailsMon1").collapse();
-   $w("#admLengthMon1").required = false;
-   $w("#admStartMon1").required = false;
+   MonAdmDet.collapse();
+   MonAdmLen.required = false;
+   MonAdmSta.required = false;
 }
 }
 
 export function admDayTue1_change() {
- if( $w("#admDayTue1").checked) {
-   $w("#admDetailsTue1").expand();
-   $w("#admLengthTue1").required = true;
-   $w("#admStartTue1").required = true;
+let TueAdm = $w("#admDayTue1");
+let TueAdmDet = $w("#admDetailsTue1");
+let TueAdmLen = $w("#admLengthTue1");
+let TueAdmSta = $w("#admStartTue1");
+
+ if(TueAdm.checked) {
+   TueAdmDet.expand();
+   TueAdmLen.required = true;
+   TueAdmSta.required = true;
+     console.log('Expanding Tue Adm Details 1 \& Requiring Tue Length and Start Time');
 }
 else {
-   $w("#admDetailsTue1").collapse();
-   $w("#admLengthTue1").required = false;
-   $w("#admStartTue1").required = false;
+   TueAdmDet.collapse();
+   TueAdmLen.required = false;
+   TueAdmSta.required = false;
 }
 }
 
 export function admDayWed1_change() {
- if( $w("#admDayWed1").checked) {
-   $w("#admDetailsWed1").expand();
-   $w("#admLengthWed1").required = true;
-   $w("#admStartWed1").required = true;
+let WedAdm = $w("#admDayWed1");
+let WedAdmDet = $w("#admDetailsWed1");
+let WedAdmLen = $w("#admLengthWed1");
+let WedAdmSta = $w("#admStartWed1");
+
+ if(WedAdm.checked) {
+   WedAdmDet.expand();
+   WedAdmLen.required = true;
+   WedAdmSta.required = true;
+     console.log('Expanding Wed Adm Details 1 \& Requiring Wed Length and Start Time');
 }
 else {
-   $w("#admDetailsWed1").collapse();
-   $w("#admLengthWed1").required = false;
-   $w("#admStartWed1").required = false;
+   WedAdmDet.collapse();
+   WedAdmLen.required = false;
+   WedAdmSta.required = false;
 } 
 }
 
 export function admDayThur1_change() {
- if( $w("#admDayThur1").checked) {
-   $w("#admDetailsThur1").expand();
-   $w("#admLengthThur1").required = true;
-   $w("#admStartThur1").required = true;
+let ThurAdm = $w("#admDayThur1");
+let ThurAdmDet = $w("#admDetailsThur1");
+let ThurAdmLen = $w("#admLengthThur1");
+let ThurAdmSta = $w("#admStartThur1");
+
+ if(ThurAdm.checked) {
+   ThurAdmDet.expand();
+   ThurAdmLen.required = true;
+   ThurAdmSta.required = true;
+     console.log('Expanding Thur Adm Details 1 \& Requiring Thur Length and Start Time');
 }
 else {
-   $w("#admDetailsThur1").collapse();
-   $w("#admLengthThur1").required = false;
-   $w("#admStartThur1").required = false;
+   ThurAdmDet.collapse();
+   ThurAdmLen.required = false;
+   ThurAdmSta.required = false;
 } 
 }
 
 export function admDayFri1_change() {
- if( $w("#admDayFri1").checked) {
-   $w("#admDetailsFri1").expand();
-   $w("#admLengthFri1").required = true;
-   $w("#admStartFri1").required = true;
+let FriAdm = $w("#admDayFri1");
+let FriAdmDet = $w("#admDetailsFri1");
+let FriAdmLen = $w("#admLengthFri1");
+let FriAdmSta = $w("#admStartFri1");
+
+ if(FriAdm.checked) {
+   FriAdmDet.expand();
+   FriAdmLen.required = true;
+   FriAdmSta.required = true;
+     console.log('Expanding Fri Adm Details 1 \& Requiring Fri Length and Start Time');
 }
 else {
-   $w("#admDetailsFri1").collapse();
-   $w("#admLengthFri1").required = false;
-   $w("#admStartFri1").required = false;
+   FriAdmDet.collapse();
+   FriAdmLen.required = false;
+   FriAdmSta.required = false;
 } 
 }
 
 export function admDaySat1_change() {
- if( $w("#admDaySat1").checked) {
-   $w("#admDetailsSat1").expand();
-   $w("#admLengthSat1").required = true;
-   $w("#admStartSat1").required = true;
+let SatAdm = $w("#admDaySat1");
+let SatAdmDet = $w("#admDetailsSat1");
+let SatAdmLen = $w("#admLengthSat1");
+let SatAdmSta = $w("#admStartSat1");
+
+ if(SatAdm.checked) {
+   SatAdmDet.expand();
+   SatAdmLen.required = true;
+   SatAdmSta.required = true;
+     console.log('Expanding Sat Adm Details 1 \& Requiring Sat Length and Start Time');
 }
 else {
-   $w("#admDetailsSat1").collapse();
-   $w("#admLengthSat1").required = false;
-   $w("#admStartSat1").required = false;
+   SatAdmDet.collapse();
+   SatAdmLen.required = false;
+   SatAdmSta.required = false;
 } 
 }
 // FOR ADMINS | End
 
 // FOR AUTHORS | Start
 export function autDaySun1_change() {
-if( $w("#autDaySun1").checked) {
-   $w("#autDetailsSun1").expand();
-   $w("#autTypeSun1").required = true;
-   $w("#autOftenSun1").required = true;
+let SunAut = $w("#autDaySun1");
+let SunAutDet = $w("#autDetailsSun1");
+let SunAutTyp = $w("#autDetailsSun1");
+let SunAutOft = $w("#autOftenSun1");
+
+if( SunAut.checked) {
+   SunAutDet.expand();
+   SunAutTyp.required = true;
+   SunAutOft.required = true;
+     console.log('Expanding Sun Aut Details 1 \& Requiring Sun Type and Often Time');
 }
 else {
-   $w("#autDetailsSun1").collapse();
-   $w("#autTypeSun1").required = false;
-   $w("#autOftenSun1").required = false;
+   SunAutDet.collapse();
+   SunAutTyp.required = false;
+   SunAutOft.required = false;
 }
 }
 
 export function autDayMon1_change() {
- if( $w("#autDayMon1").checked) {
-   $w("#autDetailsMon1").expand();
-   $w("#autTypeMon1").required = true;
-   $w("#autOftenMon1").required = true;
+let MonAut = $w("#autDayMon1");
+let MonAutDet = $w("#autDetailsMon1");
+let MonAutTyp = $w("#autTypeMon1");
+let MonAutOft = $w("#autOftenMon1");
+
+ if(MonAut.checked) {
+   MonAutDet.expand();
+   MonAutTyp.required = true;
+   MonAutOft.required = true;
+     console.log('Expanding Mon Aut Details 1 \& Requiring Mon Type and Often Time');
 }
 else {
-   $w("#autDetailsMon1").collapse();
-   $w("#autTypeMon1").required = false;
-   $w("#autOftenMon1").required = false;
+   MonAutDet.collapse();
+   MonAutTyp.required = false;
+   MonAutOft.required = false;
 }
 }
 
 export function autDayTue1_change() {
- if( $w("#autDayTue1").checked) {
-   $w("#autDetailsTue1").expand();
-   $w("#autTypeTue1").required = true;
-   $w("#autOftenTue1").required = true;
+let TueAut = $w("#autDayTue1");
+let TueAutDet = $w("#autDetailsTue1");
+let TueAutTyp = $w("#autTypeTue1");
+let TueAutOft = $w("#autOftenTue1");
+
+ if(TueAut.checked) {
+   TueAutDet.expand();
+   TueAutTyp.required = true;
+   TueAutOft.required = true;
+     console.log('Expanding Tue Aut Details 1 \& Requiring Tue Type and Often Time');
 }
 else {
-   $w("#autDetailsTue1").collapse();
-   $w("#autTypeTue1").required = false;
-   $w("#autOftenTue1").required = false;
+   TueAutDet.collapse();
+   TueAutTyp.required = false;
+   TueAutOft.required = false;
 }
 }
 
 export function autDayWed1_change() {
- if( $w("#autDayWed1").checked) {
-   $w("#autDetailsWed1").expand();
-   $w("#autTypeWed1").required = true;
-   $w("#autOftenWed1").required = true;
+let WedAut = $w("#autDayWed1");
+let WedAutDet = $w("#autDetailsWed1");
+let WedAutTyp = $w("#autTypeWed1");
+let WedAutOft = $w("#autOftenWed1");
+
+ if(WedAut.checked) {
+   WedAutDet.expand();
+   WedAutTyp.required = true;
+   WedAutOft.required = true;
+     console.log('Expanding Wed Aut Details 1 \& Requiring Wed Type and Often Time');
 }
 else {
-   $w("#autDetailsWed1").collapse();
-   $w("#autTypeWed1").required = false;
-   $w("#autOftenWed1").required = false;
+   WedAutDet.collapse();
+   WedAutTyp.required = false;
+   WedAutOft.required = false;
 } 
 }
 
 export function autDayThur1_change() {
- if( $w("#autDayThur1").checked) {
-   $w("#autDetailsThur1").expand();
-   $w("#autTypeThur1").required = true;
-   $w("#autOftenThur1").required = true;
+let ThurAut = $w("#autDayThur1");
+let ThurAutDet = $w("#autDetailsThur1");
+let ThurAutTyp = $w("#autTypeThur1");
+let ThurAutOft = $w("#autOftenThur1");
+
+ if(ThurAut.checked) {
+   ThurAutDet.expand();
+   ThurAutTyp.required = true;
+   ThurAutOft.required = true;
+     console.log('Expanding Thur Aut Details 1 \& Requiring Thur Type and Often Time');
 }
 else {
-   $w("#autDetailsThur1").collapse();
-   $w("#autTypeThur1").required = false;
-   $w("#autOftenThur1").required = false;
+   ThurAutDet.collapse();
+   ThurAutTyp.required = false;
+   ThurAutOft.required = false;
 } 
 }
 
 export function autDayFri1_change() {
- if( $w("#autDayFri1").checked) {
-   $w("#autDetailsFri1").expand();
-   $w("#autTypeFri1").required = true;
-   $w("#autOftenFri1").required = true;
+let FriAut = $w("#autDayFri1");
+let FriAutDet = $w("#autDetailsFri1");
+let FriAutTyp = $w("#autTypeFri1");
+let FriAutOft = $w("#autOftenFri1");
+
+ if(FriAut.checked) {
+   FriAutDet.expand();
+   FriAutTyp.required = true;
+   FriAutOft.required = true;
+     console.log('Expanding Fri Aut Details 1 \& Requiring Fri Type and Often Time');
 }
 else {
-   $w("#autDetailsFri1").collapse();
-   $w("#autTypeFri1").required = false;
-   $w("#autOftenFri1").required = false;
+   FriAutDet.collapse();
+   FriAutTyp.required = false;
+   FriAutOft.required = false;
 } 
 }
 
 export function autDaySat1_change() {
- if( $w("#autDaySat1").checked) {
-   $w("#autDetailsSat1").expand();
-   $w("#autTypeSat1").required = true;
-   $w("#autOftenSat1").required = true;
+let SatAut = $w("#autDaySat1");
+let SatAutDet = $w("#autDetailsSat1");
+let SatAutTyp = $w("#autTypeSat1");
+let SatAutOft = $w("#autOftenSat1");
+
+ if(SatAut.checked) {
+   SatAutDet.expand();
+   SatAutTyp.required = true;
+   SatAutOft.required = true;
+     console.log('Expanding Sat Aut Details 1 \& Requiring Sat Type and Often Time');
 }
 else {
-   $w("#autDetailsSat1").collapse();
-   $w("#autTypeSat1").required = false;
-   $w("#autOftenSat1").required = false;
+   SatAutDet.collapse();
+   SatAutTyp.required = false;
+   SatAutOft.required = false;
 } 
 }
 // FOR AUTHORS | End
 
 // FOR ARTISTS | Start
 export function artDaySun1_change() {
-if( $w("#artDaySun1").checked) {
-   $w("#artDetailsSun1").expand();
-   $w("#artTypeSun1").required = true;
-   $w("#artOftenSun1").required = true;
+let SunArt = $w("#artDaySun1");
+let SunArtDet = $w("#artDetailsSun1");
+let SunArtTyp = $w("#artDetailsSun1");
+let SunArtOft = $w("#artOftenSun1");
+
+if( SunArt.checked) {
+   SunArtDet.expand();
+   SunArtTyp.required = true;
+   SunArtOft.required = true;
+     console.log('Expanding Sun Art Details 1 \& Requiring Sun Type and Often Time');
 }
 else {
-   $w("#artDetailsSun1").collapse();
-   $w("#artTypeSun1").required = false;
-   $w("#artOftenSun1").required = false;
+   SunArtDet.collapse();
+   SunArtTyp.required = false;
+   SunArtOft.required = false;
 }
 }
 
 export function artDayMon1_change() {
- if( $w("#artDayMon1").checked) {
-   $w("#artDetailsMon1").expand();
-   $w("#artTypeMon1").required = true;
-   $w("#artOftenMon1").required = true;
+let MonArt = $w("#artDayMon1");
+let MonArtDet = $w("#artDetailsMon1");
+let MonArtTyp = $w("#artTypeMon1");
+let MonArtOft = $w("#artOftenMon1");
+
+ if(MonArt.checked) {
+   MonArtDet.expand();
+   MonArtTyp.required = true;
+   MonArtOft.required = true;
+     console.log('Expanding Mon Art Details 1 \& Requiring Mon Type and Often Time');
 }
 else {
-   $w("#artDetailsMon1").collapse();
-   $w("#artTypeMon1").required = false;
-   $w("#artOftenMon1").required = false;
+   MonArtDet.collapse();
+   MonArtTyp.required = false;
+   MonArtOft.required = false;
 }
 }
 
 export function artDayTue1_change() {
- if( $w("#artDayTue1").checked) {
-   $w("#artDetailsTue1").expand();
-   $w("#artTypeTue1").required = true;
-   $w("#artOftenTue1").required = true;
+let TueArt = $w("#artDayTue1");
+let TueArtDet = $w("#artDetailsTue1");
+let TueArtTyp = $w("#artTypeTue1");
+let TueArtOft = $w("#artOftenTue1");
+
+ if(TueArt.checked) {
+   TueArtDet.expand();
+   TueArtTyp.required = true;
+   TueArtOft.required = true;
+     console.log('Expanding Tue Art Details 1 \& Requiring Tue Type and Often Time');
 }
 else {
-   $w("#artDetailsTue1").collapse();
-   $w("#artTypeTue1").required = false;
-   $w("#artOftenTue1").required = false;
+   TueArtDet.collapse();
+   TueArtTyp.required = false;
+   TueArtOft.required = false;
 }
 }
 
 export function artDayWed1_change() {
- if( $w("#artDayWed1").checked) {
-   $w("#artDetailsWed1").expand();
-   $w("#artTypeWed1").required = true;
-   $w("#artOftenWed1").required = true;
+let WedArt = $w("#artDayWed1");
+let WedArtDet = $w("#artDetailsWed1");
+let WedArtTyp = $w("#artTypeWed1");
+let WedArtOft = $w("#artOftenWed1");
+
+ if(WedArt.checked) {
+   WedArtDet.expand();
+   WedArtTyp.required = true;
+   WedArtOft.required = true;
+     console.log('Expanding Wed Art Details 1 \& Requiring Wed Type and Often Time');
 }
 else {
-   $w("#artDetailsWed1").collapse();
-   $w("#artTypeWed1").required = false;
-   $w("#artOftenWed1").required = false;
+   WedArtDet.collapse();
+   WedArtTyp.required = false;
+   WedArtOft.required = false;
 } 
 }
 
 export function artDayThur1_change() {
- if( $w("#artDayThur1").checked) {
-   $w("#artDetailsThur1").expand();
-   $w("#artTypeThur1").required = true;
-   $w("#artOftenThur1").required = true;
+let ThurArt = $w("#artDayThur1");
+let ThurArtDet = $w("#artDetailsThur1");
+let ThurArtTyp = $w("#artTypeThur1");
+let ThurArtOft = $w("#artOftenThur1");
+
+ if(ThurArt.checked) {
+   ThurArtDet.expand();
+   ThurArtTyp.required = true;
+   ThurArtOft.required = true;
+     console.log('Expanding Thur Art Details 1 \& Requiring Thur Type and Often Time');
 }
 else {
-   $w("#artDetailsThur1").collapse();
-   $w("#artTypeThur1").required = false;
-   $w("#artOftenThur1").required = false;
+   ThurArtDet.collapse();
+   ThurArtTyp.required = false;
+   ThurArtOft.required = false;
 } 
 }
 
 export function artDayFri1_change() {
- if( $w("#artDayFri1").checked) {
-   $w("#artDetailsFri1").expand();
-   $w("#artTypeFri1").required = true;
-   $w("#artOftenFri1").required = true;
+let FriArt = $w("#artDayFri1");
+let FriArtDet = $w("#artDetailsFri1");
+let FriArtTyp = $w("#artTypeFri1");
+let FriArtOft = $w("#artOftenFri1");
+
+ if(FriArt.checked) {
+   FriArtDet.expand();
+   FriArtTyp.required = true;
+   FriArtOft.required = true;
+     console.log('Expanding Fri Art Details 1 \& Requiring Fri Type and Often Time');
 }
 else {
-   $w("#artDetailsFri1").collapse();
-   $w("#artTypeFri1").required = false;
-   $w("#artOftenFri1").required = false;
+   FriArtDet.collapse();
+   FriArtTyp.required = false;
+   FriArtOft.required = false;
 } 
 }
 
 export function artDaySat1_change() {
- if( $w("#artDaySat1").checked) {
-   $w("#artDetailsSat1").expand();
-   $w("#artTypeSat1").required = true;
-   $w("#artOftenSat1").required = true;
+let SatArt = $w("#artDaySat1");
+let SatArtDet = $w("#artDetailsSat1");
+let SatArtTyp = $w("#artTypeSat1");
+let SatArtOft = $w("#artOftenSat1");
+
+ if(SatArt.checked) {
+   SatArtDet.expand();
+   SatArtTyp.required = true;
+   SatArtOft.required = true;
+     console.log('Expanding Sat Art Details 1 \& Requiring Sat Type and Often Time');
 }
 else {
-   $w("#artDetailsSat1").collapse();
-   $w("#artTypeSat1").required = false;
-   $w("#artOftenSat1").required = false;
+   SatArtDet.collapse();
+   SatArtTyp.required = false;
+   SatArtOft.required = false;
 } 
 }
 // FOR ARTISTS | End
 
 // FOR VLOGGERS | Start
 export function vlogDaySun1_change() {
-if( $w("#vlogDaySun1").checked) {
-   $w("#vlogOftenSun1").expand();
-   $w("#vlogOftenSun1").required = true;
+let SunVlog = $w("#vlogDaySun1");
+let SunVlogOft = $w("#vlogOftenSun1");
+
+if( SunVlog.checked) {
+   SunVlogOft.expand();
+   SunVlogOft.required = true;
+     console.log('Expanding Sun Vlog Details 1 \& Requiring Sun Often');
 }
 else {
-   $w("#vlogOftenSun1").collapse();
-   $w("#vlogOftenSun1").required = false;
+   SunVlogOft.collapse();
+   SunVlogOft.required = false;
 }
 }
 
 export function vlogDayMon1_change() {
- if( $w("#vlogDayMon1").checked) {
-   $w("#vlogOftenMon1").expand();
-   $w("#vlogOftenMon1").required = true;
+let MonVlog = $w("#vlogDayMon1");
+let MonVlogOft = $w("#vlogOftenMon1");
+
+ if(MonVlog.checked) {
+   MonVlogOft.expand();
+   MonVlogOft.required = true;
+     console.log('Expanding Mon Vlog Details 1 \& Requiring Mon Often');
 }
 else {
-   $w("#vlogOftenMon1").collapse();
-   $w("#vlogOftenMon1").required = false;
+   MonVlogOft.collapse();
+   MonVlogOft.required = false;
 }
 }
 
 export function vlogDayTue1_change() {
- if( $w("#vlogDayTue1").checked) {
-   $w("#vlogOftenTue1").expand();
-   $w("#vlogOftenTue1").required = true;
+let TueVlog = $w("#vlogDayTue1");
+let TueVlogOft = $w("#vlogOftenTue1");
+
+ if(TueVlog.checked) {
+   TueVlogOft.expand();
+   TueVlogOft.required = true;
+     console.log('Expanding Tue Vlog Details 1 \& Requiring Tue Often');
 }
 else {
-   $w("#vlogOftenTue1").collapse();
-   $w("#vlogOftenTue1").required = false;
+   TueVlogOft.collapse();
+   TueVlogOft.required = false;
 }
 }
 
 export function vlogDayWed1_change() {
- if( $w("#vlogDayWed1").checked) {
-   $w("#vlogOftenWed1").expand();
-   $w("#vlogOftenWed1").required = true;
+let WedVlog = $w("#vlogDayWed1");
+let WedVlogOft = $w("#vlogOftenWed1");
+
+ if(WedVlog.checked) {
+   WedVlogOft.expand();
+   WedVlogOft.required = true;
+     console.log('Expanding Wed Vlog Details 1 \& Requiring Wed Often');
 }
 else {
-   $w("#vlogOftenWed1").collapse();
-   $w("#vlogOftenWed1").required = false;
+   WedVlogOft.collapse();
+   WedVlogOft.required = false;
 } 
 }
 
 export function vlogDayThur1_change() {
- if( $w("#vlogDayThur1").checked) {
-   $w("#vlogOftenThur1").expand();
-   $w("#vlogOftenThur1").required = true;
+let ThurVlog = $w("#vlogDayThur1");
+let ThurVlogOft = $w("#vlogOftenThur1");
+
+ if(ThurVlog.checked) {
+   ThurVlogOft.expand();
+   ThurVlogOft.required = true;
+
+     console.log('Expanding Thur Vlog Details 1 \& Requiring Thur Often');
 }
 else {
-   $w("#vlogOftenThur1").collapse();
-   $w("#vlogOftenThur1").required = false;
+   ThurVlogOft.collapse();
+   ThurVlogOft.required = false;
 } 
 }
 
 export function vlogDayFri1_change() {
- if( $w("#vlogDayFri1").checked) {
-   $w("#vlogOftenFri1").expand();
-   $w("#vlogOftenFri1").required = true;
+let FriVlog = $w("#vlogDayFri1");
+let FriVlogOft = $w("#vlogOftenFri1");
+
+ if(FriVlog.checked) {
+   FriVlogOft.expand();
+   FriVlogOft.required = true;
+     console.log('Expanding Fri Vlog Details 1 \& Requiring Fri Often');
 }
 else {
-   $w("#vlogOftenFri1").collapse();
-   $w("#vlogOftenFri1").required = false;
+   FriVlogOft.collapse();
+   FriVlogOft.required = false;
 } 
 }
 
 export function vlogDaySat1_change() {
- if( $w("#vlogDaySat1").checked) {
-   $w("#vlogOftenSat1").expand();
-   $w("#vlogOftenSat1").required = true;
+let SatVlog = $w("#vlogDaySat1");
+let SatVlogOft = $w("#vlogOftenSat1");
+
+ if(SatVlog.checked) {
+   SatVlogOft.expand();
+   SatVlogOft.required = true;
+     console.log('Expanding Sat Vlog Details 1 \& Requiring Sat Often');
 }
 else {
-   $w("#vlogOftenSat1").collapse();
-   $w("#vlogOftenSat1").required = false;
+   SatVlogOft.collapse();
+   SatVlogOft.required = false;
 } 
 }
 // FOR VLOGGERS | End
 
 // FOR STREAMERS | Start
 export function strDaySun1_change() {
-if( $w("#strDaySun1").checked) {
-   $w("#strDetailsSun1").expand();
-   $w("#strLengthSun1").required = true;
-   $w("#strStartSun1").required = true;
+let SunStr = $w("#strDaySun1");
+let SunStrDet = $w("#strDetailsSun1");
+let SunStrLen = $w("#strDetailsSun1");
+let SunStrSta = $w("#strStartSun1");
+
+if( SunStr.checked) {
+   SunStrDet.expand();
+   SunStrLen.required = true;
+   SunStrSta.required = true;
+     console.log('Expanding Sun Str Details 1 \& Requiring Sun Length and Start Time');
 }
 else {
-   $w("#strDetailsSun1").collapse();
-   $w("#strLengthSun1").required = false;
-   $w("#strStartSun1").required = false;
+   SunStrDet.collapse();
+   SunStrLen.required = false;
+   SunStrSta.required = false;
 }
 }
 
 export function strDayMon1_change() {
- if( $w("#strDayMon1").checked) {
-   $w("#strDetailsMon1").expand();
-   $w("#strLengthMon1").required = true;
-   $w("#strStartMon1").required = true;
+let MonStr = $w("#strDayMon1");
+let MonStrDet = $w("#strDetailsMon1");
+let MonStrLen = $w("#strLengthMon1");
+let MonStrSta = $w("#strStartMon1");
+
+ if(MonStr.checked) {
+   MonStrDet.expand();
+   MonStrLen.required = true;
+   MonStrSta.required = true;
+     console.log('Expanding Mon Str Details 1 \& Requiring Mon Length and Start Time');
 }
 else {
-   $w("#strDetailsMon1").collapse();
-   $w("#strLengthMon1").required = false;
-   $w("#strStartMon1").required = false;
+   MonStrDet.collapse();
+   MonStrLen.required = false;
+   MonStrSta.required = false;
 }
 }
 
 export function strDayTue1_change() {
- if( $w("#strDayTue1").checked) {
-   $w("#strDetailsTue1").expand();
-   $w("#strLengthTue1").required = true;
-   $w("#strStartTue1").required = true;
+let TueStr = $w("#strDayTue1");
+let TueStrDet = $w("#strDetailsTue1");
+let TueStrLen = $w("#strLengthTue1");
+let TueStrSta = $w("#strStartTue1");
+
+ if(TueStr.checked) {
+   TueStrDet.expand();
+   TueStrLen.required = true;
+   TueStrSta.required = true;
+     console.log('Expanding Tue Str Details 1 \& Requiring Tue Length and Start Time');
 }
 else {
-   $w("#strDetailsTue1").collapse();
-   $w("#strLengthTue1").required = false;
-   $w("#strStartTue1").required = false;
+   TueStrDet.collapse();
+   TueStrLen.required = false;
+   TueStrSta.required = false;
 }
 }
 
 export function strDayWed1_change() {
- if( $w("#strDayWed1").checked) {
-   $w("#strDetailsWed1").expand();
-   $w("#strLengthWed1").required = true;
-   $w("#strStartWed1").required = true;
+let WedStr = $w("#strDayWed1");
+let WedStrDet = $w("#strDetailsWed1");
+let WedStrLen = $w("#strLengthWed1");
+let WedStrSta = $w("#strStartWed1");
+
+ if(WedStr.checked) {
+   WedStrDet.expand();
+   WedStrLen.required = true;
+   WedStrSta.required = true;
+     console.log('Expanding Wed Str Details 1 \& Requiring Wed Length and Start Time');
 }
 else {
-   $w("#strDetailsWed1").collapse();
-   $w("#strLengthWed1").required = false;
-   $w("#strStartWed1").required = false;
+   WedStrDet.collapse();
+   WedStrLen.required = false;
+   WedStrSta.required = false;
 } 
 }
 
 export function strDayThur1_change() {
- if( $w("#strDayThur1").checked) {
-   $w("#strDetailsThur1").expand();
-   $w("#strLengthThur1").required = true;
-   $w("#strStartThur1").required = true;
+let ThurStr = $w("#strDayThur1");
+let ThurStrDet = $w("#strDetailsThur1");
+let ThurStrLen = $w("#strLengthThur1");
+let ThurStrSta = $w("#strStartThur1");
+
+ if(ThurStr.checked) {
+   ThurStrDet.expand();
+   ThurStrLen.required = true;
+   ThurStrSta.required = true;
+     console.log('Expanding Thur Str Details 1 \& Requiring Thur Length and Start Time');
 }
 else {
-   $w("#strDetailsThur1").collapse();
-   $w("#strLengthThur1").required = false;
-   $w("#strStartThur1").required = false;
+   ThurStrDet.collapse();
+   ThurStrLen.required = false;
+   ThurStrSta.required = false;
 } 
 }
 
 export function strDayFri1_change() {
- if( $w("#strDayFri1").checked) {
-   $w("#strDetailsFri1").expand();
-   $w("#strLengthFri1").required = true;
-   $w("#strStartFri1").required = true;
+let FriStr = $w("#strDayFri1");
+let FriStrDet = $w("#strDetailsFri1");
+let FriStrLen = $w("#strLengthFri1");
+let FriStrSta = $w("#strStartFri1");
+
+ if(FriStr.checked) {
+   FriStrDet.expand();
+   FriStrLen.required = true;
+   FriStrSta.required = true;
+     console.log('Expanding Fri Str Details 1 \& Requiring Fri Length and Start Time');
 }
 else {
-   $w("#strDetailsFri1").collapse();
-   $w("#strLengthFri1").required = false;
-   $w("#strStartFri1").required = false;
+   FriStrDet.collapse();
+   FriStrLen.required = false;
+   FriStrSta.required = false;
 } 
 }
 
 export function strDaySat1_change() {
- if( $w("#strDaySat1").checked) {
-   $w("#strDetailsSat1").expand();
-   $w("#strLengthSat1").required = true;
-   $w("#strStartSat1").required = true;
+let SatStr = $w("#strDaySat1");
+let SatStrDet = $w("#strDetailsSat1");
+let SatStrLen = $w("#strLengthSat1");
+let SatStrSta = $w("#strStartSat1");
+
+ if(SatStr.checked) {
+   SatStrDet.expand();
+   SatStrLen.required = true;
+   SatStrSta.required = true;
+     console.log('Expanding Sat Str Details 1 \& Requiring Sat Length and Start Time');
 }
 else {
-   $w("#strDetailsSat1").collapse();
-   $w("#strLengthSat1").required = false;
-   $w("#strStartSat1").required = false;
+   SatStrDet.collapse();
+   SatStrLen.required = false;
+   SatStrSta.required = false;
 } 
 }
 // FOR STREAMERS | End
@@ -1183,451 +1379,648 @@ else {
 
 // FOR ADMINS | Start
 export function admDaySun2_change() {
-if( $w("#admDaySun2").checked) {
-   $w("#admDetailsSun2").expand();
-   $w("#admLengthSun2").required = true;
-   $w("#admStartSun2").required = true;
+let SunAdm = $w("#admDaySun2");
+let SunAdmDet = $w("#admDetailsSun2");
+let SunAdmLen = $w("#admDetailsSun2");
+let SunAdmSta = $w("#admStartSun2");
+
+if( SunAdm.checked) {
+   SunAdmDet.expand();
+   SunAdmLen.required = true;
+   SunAdmSta.required = true;
+     console.log('Expanding Sun Adm Details 2 \& Requiring Sun Length and Start Time');
 }
 else {
-   $w("#admDetailsSun2").collapse();
-   $w("#admLengthSun2").required = false;
-   $w("#admStartSun2").required = false;
+   SunAdmDet.collapse();
+   SunAdmLen.required = false;
+   SunAdmSta.required = false;
 }
 }
 
 export function admDayMon2_change() {
- if( $w("#admDayMon2").checked) {
-   $w("#admDetailsMon2").expand();
-   $w("#admLengthMon2").required = true;
-   $w("#admStartMon2").required = true;
+let MonAdm = $w("#admDayMon2");
+let MonAdmDet = $w("#admDetailsMon2");
+let MonAdmLen = $w("#admLengthMon2");
+let MonAdmSta = $w("#admStartMon2");
+
+ if(MonAdm.checked) {
+   MonAdmDet.expand();
+   MonAdmLen.required = true;
+   MonAdmSta.required = true;
+     console.log('Expanding Mon Adm Details 2 \& Requiring Mon Length and Start Time');
 }
 else {
-   $w("#admDetailsMon2").collapse();
-   $w("#admLengthMon2").required = false;
-   $w("#admStartMon2").required = false;
+   MonAdmDet.collapse();
+   MonAdmLen.required = false;
+   MonAdmSta.required = false;
 }
 }
 
 export function admDayTue2_change() {
- if( $w("#admDayTue2").checked) {
-   $w("#admDetailsTue2").expand();
-   $w("#admLengthTue2").required = true;
-   $w("#admStartTue2").required = true;
+let TueAdm = $w("#admDayTue2");
+let TueAdmDet = $w("#admDetailsTue2");
+let TueAdmLen = $w("#admLengthTue2");
+let TueAdmSta = $w("#admStartTue2");
+
+ if(TueAdm.checked) {
+   TueAdmDet.expand();
+   TueAdmLen.required = true;
+   TueAdmSta.required = true;
+     console.log('Expanding Tue Adm Details 2 \& Requiring Tue Length and Start Time');
 }
 else {
-   $w("#admDetailsTue2").collapse();
-   $w("#admLengthTue2").required = false;
-   $w("#admStartTue2").required = false;
+   TueAdmDet.collapse();
+   TueAdmLen.required = false;
+   TueAdmSta.required = false;
 }
 }
 
 export function admDayWed2_change() {
- if( $w("#admDayWed2").checked) {
-   $w("#admDetailsWed2").expand();
-   $w("#admLengthWed2").required = true;
-   $w("#admStartWed2").required = true;
+let WedAdm = $w("#admDayWed2");
+let WedAdmDet = $w("#admDetailsWed2");
+let WedAdmLen = $w("#admLengthWed2");
+let WedAdmSta = $w("#admStartWed2");
+
+ if(WedAdm.checked) {
+   WedAdmDet.expand();
+   WedAdmLen.required = true;
+   WedAdmSta.required = true;
+     console.log('Expanding Wed Adm Details 2 \& Requiring Wed Length and Start Time');
 }
 else {
-   $w("#admDetailsWed2").collapse();
-   $w("#admLengthWed2").required = false;
-   $w("#admStartWed2").required = false;
+   WedAdmDet.collapse();
+   WedAdmLen.required = false;
+   WedAdmSta.required = false;
 } 
 }
 
 export function admDayThur2_change() {
- if( $w("#admDayThur2").checked) {
-   $w("#admDetailsThur2").expand();
-   $w("#admLengthThur2").required = true;
-   $w("#admStartThur2").required = true;
+let ThurAdm = $w("#admDayThur2");
+let ThurAdmDet = $w("#admDetailsThur2");
+let ThurAdmLen = $w("#admLengthThur2");
+let ThurAdmSta = $w("#admStartThur2");
+
+ if(ThurAdm.checked) {
+   ThurAdmDet.expand();
+   ThurAdmLen.required = true;
+   ThurAdmSta.required = true;
+     console.log('Expanding Thur Adm Details 2 \& Requiring Thur Length and Start Time');
 }
 else {
-   $w("#admDetailsThur2").collapse();
-   $w("#admLengthThur2").required = false;
-   $w("#admStartThur2").required = false;
+   ThurAdmDet.collapse();
+   ThurAdmLen.required = false;
+   ThurAdmSta.required = false;
 } 
 }
 
 export function admDayFri2_change() {
- if( $w("#admDayFri2").checked) {
-   $w("#admDetailsFri2").expand();
-   $w("#admLengthFri2").required = true;
-   $w("#admStartFri2").required = true;
+let FriAdm = $w("#admDayFri2");
+let FriAdmDet = $w("#admDetailsFri2");
+let FriAdmLen = $w("#admLengthFri2");
+let FriAdmSta = $w("#admStartFri2");
+
+ if(FriAdm.checked) {
+   FriAdmDet.expand();
+   FriAdmLen.required = true;
+   FriAdmSta.required = true;
+     console.log('Expanding Fri Adm Details 2 \& Requiring Fri Length and Start Time');
 }
 else {
-   $w("#admDetailsFri2").collapse();
-   $w("#admLengthFri2").required = false;
-   $w("#admStartFri2").required = false;
+   FriAdmDet.collapse();
+   FriAdmLen.required = false;
+   FriAdmSta.required = false;
 } 
 }
 
 export function admDaySat2_change() {
- if( $w("#admDaySat2").checked) {
-   $w("#admDetailsSat2").expand();
-   $w("#admLengthSat2").required = true;
-   $w("#admStartSat2").required = true;
+let SatAdm = $w("#admDaySat2");
+let SatAdmDet = $w("#admDetailsSat2");
+let SatAdmLen = $w("#admLengthSat2");
+let SatAdmSta = $w("#admStartSat2");
+
+ if(SatAdm.checked) {
+   SatAdmDet.expand();
+   SatAdmLen.required = true;
+   SatAdmSta.required = true;
+     console.log('Expanding Sat Adm Details 2 \& Requiring Sat Length and Start Time');
 }
 else {
-   $w("#admDetailsSat2").collapse();
-   $w("#admLengthSat2").required = false;
-   $w("#admStartSat2").required = false;
+   SatAdmDet.collapse();
+   SatAdmLen.required = false;
+   SatAdmSta.required = false;
 } 
 }
 // FOR ADMINS | End
 
 // FOR AUTHORS | Start
 export function autDaySun2_change() {
-if( $w("#autDaySun2").checked) {
-   $w("#autDetailsSun2").expand();
-   $w("#autTypeSun2").required = true;
-   $w("#autOftenSun2").required = true;
+let SunAut = $w("#autDaySun2");
+let SunAutDet = $w("#autDetailsSun2");
+let SunAutTyp = $w("#autDetailsSun2");
+let SunAutOft = $w("#autOftenSun2");
+
+if( SunAut.checked) {
+   SunAutDet.expand();
+   SunAutTyp.required = true;
+   SunAutOft.required = true;
+     console.log('Expanding Sun Aut Details 2 \& Requiring Sun Type and Often Time');
 }
 else {
-   $w("#autDetailsSun2").collapse();
-   $w("#autTypeSun2").required = false;
-   $w("#autOftenSun2").required = false;
+   SunAutDet.collapse();
+   SunAutTyp.required = false;
+   SunAutOft.required = false;
 }
 }
 
 export function autDayMon2_change() {
- if( $w("#autDayMon2").checked) {
-   $w("#autDetailsMon2").expand();
-   $w("#autTypeMon2").required = true;
-   $w("#autOftenMon2").required = true;
+let MonAut = $w("#autDayMon2");
+let MonAutDet = $w("#autDetailsMon2");
+let MonAutTyp = $w("#autTypeMon2");
+let MonAutOft = $w("#autOftenMon2");
+
+ if(MonAut.checked) {
+   MonAutDet.expand();
+   MonAutTyp.required = true;
+   MonAutOft.required = true;
+     console.log('Expanding Mon Aut Details 2 \& Requiring Mon Type and Often Time');
 }
 else {
-   $w("#autDetailsMon2").collapse();
-   $w("#autTypeMon2").required = false;
-   $w("#autOftenMon2").required = false;
+   MonAutDet.collapse();
+   MonAutTyp.required = false;
+   MonAutOft.required = false;
 }
 }
 
 export function autDayTue2_change() {
- if( $w("#autDayTue2").checked) {
-   $w("#autDetailsTue2").expand();
-   $w("#autTypeTue2").required = true;
-   $w("#autOftenTue2").required = true;
+let TueAut = $w("#autDayTue2");
+let TueAutDet = $w("#autDetailsTue2");
+let TueAutTyp = $w("#autTypeTue2");
+let TueAutOft = $w("#autOftenTue2");
+
+ if(TueAut.checked) {
+   TueAutDet.expand();
+   TueAutTyp.required = true;
+   TueAutOft.required = true;
+     console.log('Expanding Tue Aut Details 2 \& Requiring Tue Type and Often Time');
 }
 else {
-   $w("#autDetailsTue2").collapse();
-   $w("#autTypeTue2").required = false;
-   $w("#autOftenTue2").required = false;
+   TueAutDet.collapse();
+   TueAutTyp.required = false;
+   TueAutOft.required = false;
 }
 }
 
 export function autDayWed2_change() {
- if( $w("#autDayWed2").checked) {
-   $w("#autDetailsWed2").expand();
-   $w("#autTypeWed2").required = true;
-   $w("#autOftenWed2").required = true;
+let WedAut = $w("#autDayWed2");
+let WedAutDet = $w("#autDetailsWed2");
+let WedAutTyp = $w("#autTypeWed2");
+let WedAutOft = $w("#autOftenWed2");
+
+ if(WedAut.checked) {
+   WedAutDet.expand();
+   WedAutTyp.required = true;
+   WedAutOft.required = true;
+     console.log('Expanding Wed Aut Details 2 \& Requiring Wed Type and Often Time');
 }
 else {
-   $w("#autDetailsWed2").collapse();
-   $w("#autTypeWed2").required = false;
-   $w("#autOftenWed2").required = false;
+   WedAutDet.collapse();
+   WedAutTyp.required = false;
+   WedAutOft.required = false;
 } 
 }
 
 export function autDayThur2_change() {
- if( $w("#autDayThur2").checked) {
-   $w("#autDetailsThur2").expand();
-   $w("#autTypeThur2").required = true;
-   $w("#autOftenThur2").required = true;
+let ThurAut = $w("#autDayThur2");
+let ThurAutDet = $w("#autDetailsThur2");
+let ThurAutTyp = $w("#autTypeThur2");
+let ThurAutOft = $w("#autOftenThur2");
+
+ if(ThurAut.checked) {
+   ThurAutDet.expand();
+   ThurAutTyp.required = true;
+   ThurAutOft.required = true;
+     console.log('Expanding Thur Aut Details 2 \& Requiring Thur Type and Often Time');
 }
 else {
-   $w("#autDetailsThur2").collapse();
-   $w("#autTypeThur2").required = false;
-   $w("#autOftenThur2").required = false;
+   ThurAutDet.collapse();
+   ThurAutTyp.required = false;
+   ThurAutOft.required = false;
 } 
 }
 
 export function autDayFri2_change() {
- if( $w("#autDayFri2").checked) {
-   $w("#autDetailsFri2").expand();
-   $w("#autTypeFri2").required = true;
-   $w("#autOftenFri2").required = true;
+let FriAut = $w("#autDayFri2");
+let FriAutDet = $w("#autDetailsFri2");
+let FriAutTyp = $w("#autTypeFri2");
+let FriAutOft = $w("#autOftenFri2");
+
+ if(FriAut.checked) {
+   FriAutDet.expand();
+   FriAutTyp.required = true;
+   FriAutOft.required = true;
+     console.log('Expanding Fri Aut Details 2 \& Requiring Fri Type and Often Time');
 }
 else {
-   $w("#autDetailsFri2").collapse();
-   $w("#autTypeFri2").required = false;
-   $w("#autOftenFri2").required = false;
+   FriAutDet.collapse();
+   FriAutTyp.required = false;
+   FriAutOft.required = false;
 } 
 }
 
 export function autDaySat2_change() {
- if( $w("#autDaySat2").checked) {
-   $w("#autDetailsSat2").expand();
-   $w("#autTypeSat2").required = true;
-   $w("#autOftenSat2").required = true;
+let SatAut = $w("#autDaySat2");
+let SatAutDet = $w("#autDetailsSat2");
+let SatAutTyp = $w("#autTypeSat2");
+let SatAutOft = $w("#autOftenSat2");
+
+ if(SatAut.checked) {
+   SatAutDet.expand();
+   SatAutTyp.required = true;
+   SatAutOft.required = true;
+     console.log('Expanding Sat Aut Details 2 \& Requiring Sat Type and Often Time');
 }
 else {
-   $w("#autDetailsSat2").collapse();
-   $w("#autTypeSat2").required = false;
-   $w("#autOftenSat2").required = false;
+   SatAutDet.collapse();
+   SatAutTyp.required = false;
+   SatAutOft.required = false;
 } 
 }
 // FOR AUTHORS | End
 
 // FOR ARTISTS | Start
 export function artDaySun2_change() {
-if( $w("#artDaySun2").checked) {
-   $w("#artDetailsSun2").expand();
-   $w("#artTypeSun2").required = true;
-   $w("#artOftenSun2").required = true;
+let SunArt = $w("#artDaySun2");
+let SunArtDet = $w("#artDetailsSun2");
+let SunArtTyp = $w("#artDetailsSun2");
+let SunArtOft = $w("#artOftenSun2");
+
+if( SunArt.checked) {
+   SunArtDet.expand();
+   SunArtTyp.required = true;
+   SunArtOft.required = true;
+     console.log('Expanding Sun Art Details 2 \& Requiring Sun Type and Often Time');
 }
 else {
-   $w("#artDetailsSun2").collapse();
-   $w("#artTypeSun2").required = false;
-   $w("#artOftenSun2").required = false;
+   SunArtDet.collapse();
+   SunArtTyp.required = false;
+   SunArtOft.required = false;
 }
 }
 
 export function artDayMon2_change() {
- if( $w("#artDayMon2").checked) {
-   $w("#artDetailsMon2").expand();
-   $w("#artTypeMon2").required = true;
-   $w("#artOftenMon2").required = true;
+let MonArt = $w("#artDayMon2");
+let MonArtDet = $w("#artDetailsMon2");
+let MonArtTyp = $w("#artTypeMon2");
+let MonArtOft = $w("#artOftenMon2");
+
+ if(MonArt.checked) {
+   MonArtDet.expand();
+   MonArtTyp.required = true;
+   MonArtOft.required = true;
+     console.log('Expanding Mon Art Details 2 \& Requiring Mon Type and Often Time');
 }
 else {
-   $w("#artDetailsMon2").collapse();
-   $w("#artTypeMon2").required = false;
-   $w("#artOftenMon2").required = false;
+   MonArtDet.collapse();
+   MonArtTyp.required = false;
+   MonArtOft.required = false;
 }
 }
 
 export function artDayTue2_change() {
- if( $w("#artDayTue2").checked) {
-   $w("#artDetailsTue2").expand();
-   $w("#artTypeTue2").required = true;
-   $w("#artOftenTue2").required = true;
+let TueArt = $w("#artDayTue2");
+let TueArtDet = $w("#artDetailsTue2");
+let TueArtTyp = $w("#artTypeTue2");
+let TueArtOft = $w("#artOftenTue2");
+
+ if(TueArt.checked) {
+   TueArtDet.expand();
+   TueArtTyp.required = true;
+   TueArtOft.required = true;
+     console.log('Expanding Tue Art Details 2 \& Requiring Tue Type and Often Time');
 }
 else {
-   $w("#artDetailsTue2").collapse();
-   $w("#artTypeTue2").required = false;
-   $w("#artOftenTue2").required = false;
+   TueArtDet.collapse();
+   TueArtTyp.required = false;
+   TueArtOft.required = false;
 }
 }
 
 export function artDayWed2_change() {
- if( $w("#artDayWed2").checked) {
-   $w("#artDetailsWed2").expand();
-   $w("#artTypeWed2").required = true;
-   $w("#artOftenWed2").required = true;
+let WedArt = $w("#artDayWed2");
+let WedArtDet = $w("#artDetailsWed2");
+let WedArtTyp = $w("#artTypeWed2");
+let WedArtOft = $w("#artOftenWed2");
+
+ if(WedArt.checked) {
+   WedArtDet.expand();
+   WedArtTyp.required = true;
+   WedArtOft.required = true;
+     console.log('Expanding Wed Art Details 2 \& Requiring Wed Type and Often Time');
 }
 else {
-   $w("#artDetailsWed2").collapse();
-   $w("#artTypeWed2").required = false;
-   $w("#artOftenWed2").required = false;
+   WedArtDet.collapse();
+   WedArtTyp.required = false;
+   WedArtOft.required = false;
 } 
 }
 
 export function artDayThur2_change() {
- if( $w("#artDayThur2").checked) {
-   $w("#artDetailsThur2").expand();
-   $w("#artTypeThur2").required = true;
-   $w("#artOftenThur2").required = true;
+let ThurArt = $w("#artDayThur2");
+let ThurArtDet = $w("#artDetailsThur2");
+let ThurArtTyp = $w("#artTypeThur2");
+let ThurArtOft = $w("#artOftenThur2");
+
+ if(ThurArt.checked) {
+   ThurArtDet.expand();
+   ThurArtTyp.required = true;
+   ThurArtOft.required = true;
+     console.log('Expanding Thur Art Details 2 \& Requiring Thur Type and Often Time');
 }
 else {
-   $w("#artDetailsThur2").collapse();
-   $w("#artTypeThur2").required = false;
-   $w("#artOftenThur2").required = false;
+   ThurArtDet.collapse();
+   ThurArtTyp.required = false;
+   ThurArtOft.required = false;
 } 
 }
 
 export function artDayFri2_change() {
- if( $w("#artDayFri2").checked) {
-   $w("#artDetailsFri2").expand();
-   $w("#artTypeFri2").required = true;
-   $w("#artOftenFri2").required = true;
+let FriArt = $w("#artDayFri2");
+let FriArtDet = $w("#artDetailsFri2");
+let FriArtTyp = $w("#artTypeFri2");
+let FriArtOft = $w("#artOftenFri2");
+
+ if(FriArt.checked) {
+   FriArtDet.expand();
+   FriArtTyp.required = true;
+   FriArtOft.required = true;
+     console.log('Expanding Fri Art Details 2 \& Requiring Fri Type and Often Time');
 }
 else {
-   $w("#artDetailsFri2").collapse();
-   $w("#artTypeFri2").required = false;
-   $w("#artOftenFri2").required = false;
+   FriArtDet.collapse();
+   FriArtTyp.required = false;
+   FriArtOft.required = false;
 } 
 }
 
 export function artDaySat2_change() {
- if( $w("#artDaySat2").checked) {
-   $w("#artDetailsSat2").expand();
-   $w("#artTypeSat2").required = true;
-   $w("#artOftenSat2").required = true;
+let SatArt = $w("#artDaySat2");
+let SatArtDet = $w("#artDetailsSat2");
+let SatArtTyp = $w("#artTypeSat2");
+let SatArtOft = $w("#artOftenSat2");
+
+ if(SatArt.checked) {
+   SatArtDet.expand();
+   SatArtTyp.required = true;
+   SatArtOft.required = true;
+     console.log('Expanding Sat Art Details 2 \& Requiring Sat Type and Often Time');
 }
 else {
-   $w("#artDetailsSat2").collapse();
-   $w("#artTypeSat2").required = false;
-   $w("#artOftenSat2").required = false;
+   SatArtDet.collapse();
+   SatArtTyp.required = false;
+   SatArtOft.required = false;
 } 
 }
 // FOR ARTISTS | End
 
 // FOR VLOGGERS | Start
 export function vlogDaySun2_change() {
-if( $w("#vlogDaySun2").checked) {
-   $w("#vlogOftenSun2").expand();
-   $w("#vlogOftenSun2").required = true;
+let SunVlog = $w("#vlogDaySun2");
+let SunVlogOft = $w("#vlogOftenSun2");
+
+if( SunVlog.checked) {
+   SunVlogOft.expand();
+   SunVlogOft.required = true;
+     console.log('Expanding Sun Vlog Details 2 \& Requiring Sun Often');
 }
 else {
-   $w("#vlogOftenSun2").collapse();
-   $w("#vlogOftenSun2").required = false;
+   SunVlogOft.collapse();
+   SunVlogOft.required = false;
 }
 }
 
 export function vlogDayMon2_change() {
- if( $w("#vlogDayMon2").checked) {
-   $w("#vlogOftenMon2").expand();
-   $w("#vlogOftenMon2").required = true;
+let MonVlog = $w("#vlogDayMon2");
+let MonVlogOft = $w("#vlogOftenMon2");
+
+ if(MonVlog.checked) {
+   MonVlogOft.expand();
+   MonVlogOft.required = true;
+     console.log('Expanding Mon Vlog Details 2 \& Requiring Mon Often');
 }
 else {
-   $w("#vlogOftenMon2").collapse();
-   $w("#vlogOftenMon2").required = false;
+   MonVlogOft.collapse();
+   MonVlogOft.required = false;
 }
 }
 
 export function vlogDayTue2_change() {
- if( $w("#vlogDayTue2").checked) {
-   $w("#vlogOftenTue2").expand();
-   $w("#vlogOftenTue2").required = true;
+let TueVlog = $w("#vlogDayTue2");
+let TueVlogOft = $w("#vlogOftenTue2");
+
+ if(TueVlog.checked) {
+   TueVlogOft.expand();
+   TueVlogOft.required = true;
+     console.log('Expanding Tue Vlog Details 2 \& Requiring Tue Often');
 }
 else {
-   $w("#vlogOftenTue2").collapse();
-   $w("#vlogOftenTue2").required = false;
+   TueVlogOft.collapse();
+   TueVlogOft.required = false;
 }
 }
 
 export function vlogDayWed2_change() {
- if( $w("#vlogDayWed2").checked) {
-   $w("#vlogOftenWed2").expand();
-   $w("#vlogOftenWed2").required = true;
+let WedVlog = $w("#vlogDayWed2");
+let WedVlogOft = $w("#vlogOftenWed2");
+
+ if(WedVlog.checked) {
+   WedVlogOft.expand();
+   WedVlogOft.required = true;
+     console.log('Expanding Wed Vlog Details 2 \& Requiring Wed Often');
 }
 else {
-   $w("#vlogOftenWed2").collapse();
-   $w("#vlogOftenWed2").required = false;
+   WedVlogOft.collapse();
+   WedVlogOft.required = false;
 } 
 }
 
 export function vlogDayThur2_change() {
- if( $w("#vlogDayThur2").checked) {
-   $w("#vlogOftenThur2").expand();
-   $w("#vlogOftenThur2").required = true;
+let ThurVlog = $w("#vlogDayThur2");
+let ThurVlogOft = $w("#vlogOftenThur2");
+
+ if(ThurVlog.checked) {
+   ThurVlogOft.expand();
+   ThurVlogOft.required = true;
+
+     console.log('Expanding Thur Vlog Details 2 \& Requiring Thur Often');
 }
 else {
-   $w("#vlogOftenThur2").collapse();
-   $w("#vlogOftenThur2").required = false;
+   ThurVlogOft.collapse();
+   ThurVlogOft.required = false;
 } 
 }
 
 export function vlogDayFri2_change() {
- if( $w("#vlogDayFri2").checked) {
-   $w("#vlogOftenFri2").expand();
-   $w("#vlogOftenFri2").required = true;
+let FriVlog = $w("#vlogDayFri2");
+let FriVlogOft = $w("#vlogOftenFri2");
+
+ if(FriVlog.checked) {
+   FriVlogOft.expand();
+   FriVlogOft.required = true;
+     console.log('Expanding Fri Vlog Details 2 \& Requiring Fri Often');
 }
 else {
-   $w("#vlogOftenFri2").collapse();
-   $w("#vlogOftenFri2").required = false;
+   FriVlogOft.collapse();
+   FriVlogOft.required = false;
 } 
 }
 
 export function vlogDaySat2_change() {
- if( $w("#vlogDaySat2").checked) {
-   $w("#vlogOftenSat2").expand();
-   $w("#vlogOftenSat2").required = true;
+let SatVlog = $w("#vlogDaySat2");
+let SatVlogOft = $w("#vlogOftenSat2");
+
+ if(SatVlog.checked) {
+   SatVlogOft.expand();
+   SatVlogOft.required = true;
+     console.log('Expanding Sat Vlog Details 2 \& Requiring Sat Often');
 }
 else {
-   $w("#vlogOftenSat2").collapse();
-   $w("#vlogOftenSat2").required = false;
+   SatVlogOft.collapse();
+   SatVlogOft.required = false;
 } 
 }
 // FOR VLOGGERS | End
 
 // FOR STREAMERS | Start
 export function strDaySun2_change() {
-if( $w("#strDaySun2").checked) {
-   $w("#strDetailsSun2").expand();
-   $w("#strLengthSun2").required = true;
-   $w("#strStartSun2").required = true;
+let SunStr = $w("#strDaySun2");
+let SunStrDet = $w("#strDetailsSun2");
+let SunStrLen = $w("#strDetailsSun2");
+let SunStrSta = $w("#strStartSun2");
+
+if( SunStr.checked) {
+   SunStrDet.expand();
+   SunStrLen.required = true;
+   SunStrSta.required = true;
+     console.log('Expanding Sun Str Details 2 \& Requiring Sun Length and Start Time');
 }
 else {
-   $w("#strDetailsSun2").collapse();
-   $w("#strLengthSun2").required = false;
-   $w("#strStartSun2").required = false;
+   SunStrDet.collapse();
+   SunStrLen.required = false;
+   SunStrSta.required = false;
 }
 }
 
 export function strDayMon2_change() {
- if( $w("#strDayMon2").checked) {
-   $w("#strDetailsMon2").expand();
-   $w("#strLengthMon2").required = true;
-   $w("#strStartMon2").required = true;
+let MonStr = $w("#strDayMon2");
+let MonStrDet = $w("#strDetailsMon2");
+let MonStrLen = $w("#strLengthMon2");
+let MonStrSta = $w("#strStartMon2");
+
+ if(MonStr.checked) {
+   MonStrDet.expand();
+   MonStrLen.required = true;
+   MonStrSta.required = true;
+     console.log('Expanding Mon Str Details 2 \& Requiring Mon Length and Start Time');
 }
 else {
-   $w("#strDetailsMon2").collapse();
-   $w("#strLengthMon2").required = false;
-   $w("#strStartMon2").required = false;
+   MonStrDet.collapse();
+   MonStrLen.required = false;
+   MonStrSta.required = false;
 }
 }
 
 export function strDayTue2_change() {
- if( $w("#strDayTue2").checked) {
-   $w("#strDetailsTue2").expand();
-   $w("#strLengthTue2").required = true;
-   $w("#strStartTue2").required = true;
+let TueStr = $w("#strDayTue2");
+let TueStrDet = $w("#strDetailsTue2");
+let TueStrLen = $w("#strLengthTue2");
+let TueStrSta = $w("#strStartTue2");
+
+ if(TueStr.checked) {
+   TueStrDet.expand();
+   TueStrLen.required = true;
+   TueStrSta.required = true;
+     console.log('Expanding Tue Str Details 2 \& Requiring Tue Length and Start Time');
 }
 else {
-   $w("#strDetailsTue2").collapse();
-   $w("#strLengthTue2").required = false;
-   $w("#strStartTue2").required = false;
+   TueStrDet.collapse();
+   TueStrLen.required = false;
+   TueStrSta.required = false;
 }
 }
 
 export function strDayWed2_change() {
- if( $w("#strDayWed2").checked) {
-   $w("#strDetailsWed2").expand();
-   $w("#strLengthWed2").required = true;
-   $w("#strStartWed2").required = true;
+let WedStr = $w("#strDayWed2");
+let WedStrDet = $w("#strDetailsWed2");
+let WedStrLen = $w("#strLengthWed2");
+let WedStrSta = $w("#strStartWed2");
+
+ if(WedStr.checked) {
+   WedStrDet.expand();
+   WedStrLen.required = true;
+   WedStrSta.required = true;
+     console.log('Expanding Wed Str Details 2 \& Requiring Wed Length and Start Time');
 }
 else {
-   $w("#strDetailsWed2").collapse();
-   $w("#strLengthWed2").required = false;
-   $w("#strStartWed2").required = false;
+   WedStrDet.collapse();
+   WedStrLen.required = false;
+   WedStrSta.required = false;
 } 
 }
 
 export function strDayThur2_change() {
- if( $w("#strDayThur2").checked) {
-   $w("#strDetailsThur2").expand();
-   $w("#strLengthThur2").required = true;
-   $w("#strStartThur2").required = true;
+let ThurStr = $w("#strDayThur2");
+let ThurStrDet = $w("#strDetailsThur2");
+let ThurStrLen = $w("#strLengthThur2");
+let ThurStrSta = $w("#strStartThur2");
+
+ if(ThurStr.checked) {
+   ThurStrDet.expand();
+   ThurStrLen.required = true;
+   ThurStrSta.required = true;
+     console.log('Expanding Thur Str Details 2 \& Requiring Thur Length and Start Time');
 }
 else {
-   $w("#strDetailsThur2").collapse();
-   $w("#strLengthThur2").required = false;
-   $w("#strStartThur2").required = false;
+   ThurStrDet.collapse();
+   ThurStrLen.required = false;
+   ThurStrSta.required = false;
 } 
 }
 
 export function strDayFri2_change() {
- if( $w("#strDayFri2").checked) {
-   $w("#strDetailsFri2").expand();
-   $w("#strLengthFri2").required = true;
-   $w("#strStartFri2").required = true;
+let FriStr = $w("#strDayFri2");
+let FriStrDet = $w("#strDetailsFri2");
+let FriStrLen = $w("#strLengthFri2");
+let FriStrSta = $w("#strStartFri2");
+
+ if(FriStr.checked) {
+   FriStrDet.expand();
+   FriStrLen.required = true;
+   FriStrSta.required = true;
+     console.log('Expanding Fri Str Details 2 \& Requiring Fri Length and Start Time');
 }
 else {
-   $w("#strDetailsFri2").collapse();
-   $w("#strLengthFri2").required = false;
-   $w("#strStartFri2").required = false;
+   FriStrDet.collapse();
+   FriStrLen.required = false;
+   FriStrSta.required = false;
 } 
 }
 
 export function strDaySat2_change() {
- if( $w("#strDaySat2").checked) {
-   $w("#strDetailsSat2").expand();
-   $w("#strLengthSat2").required = true;
-   $w("#strStartSat2").required = true;
+let SatStr = $w("#strDaySat2");
+let SatStrDet = $w("#strDetailsSat2");
+let SatStrLen = $w("#strLengthSat2");
+let SatStrSta = $w("#strStartSat2");
+
+ if(SatStr.checked) {
+   SatStrDet.expand();
+   SatStrLen.required = true;
+   SatStrSta.required = true;
+     console.log('Expanding Sat Str Details 2 \& Requiring Sat Length and Start Time');
 }
 else {
-   $w("#strDetailsSat2").collapse();
-   $w("#strLengthSat2").required = false;
-   $w("#strStartSat2").required = false;
+   SatStrDet.collapse();
+   SatStrLen.required = false;
+   SatStrSta.required = false;
 } 
 }
 // FOR STREAMERS | End
@@ -1640,451 +2033,649 @@ else {
 
 // FOR ADMINS | Start
 export function admDaySun3_change() {
-if( $w("#admDaySun3").checked) {
-   $w("#admDetailsSun3").expand();
-   $w("#admLengthSun3").required = true;
-   $w("#admStartSun3").required = true;
+let SunAdm = $w("#admDaySun3");
+let SunAdmDet = $w("#admDetailsSun3");
+let SunAdmLen = $w("#admDetailsSun3");
+let SunAdmSta = $w("#admStartSun3");
+
+if( SunAdm.checked) {
+   SunAdmDet.expand();
+   SunAdmLen.required = true;
+   SunAdmSta.required = true;
+     console.log('Expanding Sun Adm Details 3 \& Requiring Sun Length and Start Time');
 }
 else {
-   $w("#admDetailsSun3").collapse();
-   $w("#admLengthSun3").required = false;
-   $w("#admStartSun3").required = false;
+   SunAdmDet.collapse();
+   SunAdmLen.required = false;
+   SunAdmSta.required = false;
 }
 }
 
 export function admDayMon3_change() {
- if( $w("#admDayMon3").checked) {
-   $w("#admDetailsMon3").expand();
-   $w("#admLengthMon3").required = true;
-   $w("#admStartMon3").required = true;
+let MonAdm = $w("#admDayMon3");
+let MonAdmDet = $w("#admDetailsMon3");
+let MonAdmLen = $w("#admLengthMon3");
+let MonAdmSta = $w("#admStartMon3");
+
+ if(MonAdm.checked) {
+   MonAdmDet.expand();
+   MonAdmLen.required = true;
+   MonAdmSta.required = true;
+     console.log('Expanding Mon Adm Details 3 \& Requiring Mon Length and Start Time');
 }
 else {
-   $w("#admDetailsMon3").collapse();
-   $w("#admLengthMon3").required = false;
-   $w("#admStartMon3").required = false;
+   MonAdmDet.collapse();
+   MonAdmLen.required = false;
+   MonAdmSta.required = false;
 }
 }
 
 export function admDayTue3_change() {
- if( $w("#admDayTue3").checked) {
-   $w("#admDetailsTue3").expand();
-   $w("#admLengthTue3").required = true;
-   $w("#admStartTue3").required = true;
+let TueAdm = $w("#admDayTue3");
+let TueAdmDet = $w("#admDetailsTue3");
+let TueAdmLen = $w("#admLengthTue3");
+let TueAdmSta = $w("#admStartTue3");
+
+ if(TueAdm.checked) {
+   TueAdmDet.expand();
+   TueAdmLen.required = true;
+   TueAdmSta.required = true;
+     console.log('Expanding Tue Adm Details 3 \& Requiring Tue Length and Start Time');
 }
 else {
-   $w("#admDetailsTue3").collapse();
-   $w("#admLengthTue3").required = false;
-   $w("#admStartTue3").required = false;
+   TueAdmDet.collapse();
+   TueAdmLen.required = false;
+   TueAdmSta.required = false;
 }
 }
 
 export function admDayWed3_change() {
- if( $w("#admDayWed3").checked) {
-   $w("#admDetailsWed3").expand();
-   $w("#admLengthWed3").required = true;
-   $w("#admStartWed3").required = true;
+let WedAdm = $w("#admDayWed3");
+let WedAdmDet = $w("#admDetailsWed3");
+let WedAdmLen = $w("#admLengthWed3");
+let WedAdmSta = $w("#admStartWed3");
+
+ if(WedAdm.checked) {
+   WedAdmDet.expand();
+   WedAdmLen.required = true;
+   WedAdmSta.required = true;
+     console.log('Expanding Wed Adm Details 3 \& Requiring Wed Length and Start Time');
 }
 else {
-   $w("#admDetailsWed3").collapse();
-   $w("#admLengthWed3").required = false;
-   $w("#admStartWed3").required = false;
+   WedAdmDet.collapse();
+   WedAdmLen.required = false;
+   WedAdmSta.required = false;
 } 
 }
 
 export function admDayThur3_change() {
- if( $w("#admDayThur3").checked) {
-   $w("#admDetailsThur3").expand();
-   $w("#admLengthThur3").required = true;
-   $w("#admStartThur3").required = true;
+let ThurAdm = $w("#admDayThur3");
+let ThurAdmDet = $w("#admDetailsThur3");
+let ThurAdmLen = $w("#admLengthThur3");
+let ThurAdmSta = $w("#admStartThur3");
+
+ if(ThurAdm.checked) {
+   ThurAdmDet.expand();
+   ThurAdmLen.required = true;
+   ThurAdmSta.required = true;
+     console.log('Expanding Thur Adm Details 3 \& Requiring Thur Length and Start Time');
 }
 else {
-   $w("#admDetailsThur3").collapse();
-   $w("#admLengthThur3").required = false;
-   $w("#admStartThur3").required = false;
+   ThurAdmDet.collapse();
+   ThurAdmLen.required = false;
+   ThurAdmSta.required = false;
 } 
 }
 
 export function admDayFri3_change() {
- if( $w("#admDayFri3").checked) {
-   $w("#admDetailsFri3").expand();
-   $w("#admLengthFri3").required = true;
-   $w("#admStartFri3").required = true;
+let FriAdm = $w("#admDayFri3");
+let FriAdmDet = $w("#admDetailsFri3");
+let FriAdmLen = $w("#admLengthFri3");
+let FriAdmSta = $w("#admStartFri3");
+
+ if(FriAdm.checked) {
+   FriAdmDet.expand();
+   FriAdmLen.required = true;
+   FriAdmSta.required = true;
+     console.log('Expanding Fri Adm Details 3 \& Requiring Fri Length and Start Time');
 }
 else {
-   $w("#admDetailsFri3").collapse();
-   $w("#admLengthFri3").required = false;
-   $w("#admStartFri3").required = false;
+   FriAdmDet.collapse();
+   FriAdmLen.required = false;
+   FriAdmSta.required = false;
 } 
 }
 
 export function admDaySat3_change() {
- if( $w("#admDaySat3").checked) {
-   $w("#admDetailsSat3").expand();
-   $w("#admLengthSat3").required = true;
-   $w("#admStartSat3").required = true;
+let SatAdm = $w("#admDaySat3");
+let SatAdmDet = $w("#admDetailsSat3");
+let SatAdmLen = $w("#admLengthSat3");
+let SatAdmSta = $w("#admStartSat3");
+
+ if(SatAdm.checked) {
+   SatAdmDet.expand();
+   SatAdmLen.required = true;
+   SatAdmSta.required = true;
+     console.log('Expanding Sat Adm Details 3 \& Requiring Sat Length and Start Time');
 }
 else {
-   $w("#admDetailsSat3").collapse();
-   $w("#admLengthSat3").required = false;
-   $w("#admStartSat3").required = false;
+   SatAdmDet.collapse();
+   SatAdmLen.required = false;
+   SatAdmSta.required = false;
 } 
 }
 // FOR ADMINS | End
 
 // FOR AUTHORS | Start
 export function autDaySun3_change() {
-if( $w("#autDaySun3").checked) {
-   $w("#autDetailsSun3").expand();
-   $w("#autTypeSun3").required = true;
-   $w("#autOftenSun3").required = true;
+let SunAut = $w("#autDaySun3");
+let SunAutDet = $w("#autDetailsSun3");
+let SunAutTyp = $w("#autDetailsSun3");
+let SunAutOft = $w("#autOftenSun3");
+
+if( SunAut.checked) {
+   SunAutDet.expand();
+   SunAutTyp.required = true;
+   SunAutOft.required = true;
+     console.log('Expanding Sun Aut Details 3 \& Requiring Sun Type and Often Time');
 }
 else {
-   $w("#autDetailsSun3").collapse();
-   $w("#autTypeSun3").required = false;
-   $w("#autOftenSun3").required = false;
+   SunAutDet.collapse();
+   SunAutTyp.required = false;
+   SunAutOft.required = false;
 }
 }
 
 export function autDayMon3_change() {
- if( $w("#autDayMon3").checked) {
-   $w("#autDetailsMon3").expand();
-   $w("#autTypeMon3").required = true;
-   $w("#autOftenMon3").required = true;
+let MonAut = $w("#autDayMon3");
+let MonAutDet = $w("#autDetailsMon3");
+let MonAutTyp = $w("#autTypeMon3");
+let MonAutOft = $w("#autOftenMon3");
+
+ if(MonAut.checked) {
+   MonAutDet.expand();
+   MonAutTyp.required = true;
+   MonAutOft.required = true;
+     console.log('Expanding Mon Aut Details 3 \& Requiring Mon Type and Often Time');
 }
 else {
-   $w("#autDetailsMon3").collapse();
-   $w("#autTypeMon3").required = false;
-   $w("#autOftenMon3").required = false;
+   MonAutDet.collapse();
+   MonAutTyp.required = false;
+   MonAutOft.required = false;
 }
 }
 
 export function autDayTue3_change() {
- if( $w("#autDayTue3").checked) {
-   $w("#autDetailsTue3").expand();
-   $w("#autTypeTue3").required = true;
-   $w("#autOftenTue3").required = true;
+let TueAut = $w("#autDayTue3");
+let TueAutDet = $w("#autDetailsTue3");
+let TueAutTyp = $w("#autTypeTue3");
+let TueAutOft = $w("#autOftenTue3");
+
+ if(TueAut.checked) {
+   TueAutDet.expand();
+   TueAutTyp.required = true;
+   TueAutOft.required = true;
+     console.log('Expanding Tue Aut Details 3 \& Requiring Tue Type and Often Time');
 }
 else {
-   $w("#autDetailsTue3").collapse();
-   $w("#autTypeTue3").required = false;
-   $w("#autOftenTue3").required = false;
+   TueAutDet.collapse();
+   TueAutTyp.required = false;
+   TueAutOft.required = false;
 }
 }
 
 export function autDayWed3_change() {
- if( $w("#autDayWed3").checked) {
-   $w("#autDetailsWed3").expand();
-   $w("#autTypeWed3").required = true;
-   $w("#autOftenWed3").required = true;
+let WedAut = $w("#autDayWed3");
+let WedAutDet = $w("#autDetailsWed3");
+let WedAutTyp = $w("#autTypeWed3");
+let WedAutOft = $w("#autOftenWed3");
+
+ if(WedAut.checked) {
+   WedAutDet.expand();
+   WedAutTyp.required = true;
+   WedAutOft.required = true;
+     console.log('Expanding Wed Aut Details 3 \& Requiring Wed Type and Often Time');
 }
 else {
-   $w("#autDetailsWed3").collapse();
-   $w("#autTypeWed3").required = false;
-   $w("#autOftenWed3").required = false;
+   WedAutDet.collapse();
+   WedAutTyp.required = false;
+   WedAutOft.required = false;
 } 
 }
 
 export function autDayThur3_change() {
- if( $w("#autDayThur3").checked) {
-   $w("#autDetailsThur3").expand();
-   $w("#autTypeThur3").required = true;
-   $w("#autOftenThur3").required = true;
+let ThurAut = $w("#autDayThur3");
+let ThurAutDet = $w("#autDetailsThur3");
+let ThurAutTyp = $w("#autTypeThur3");
+let ThurAutOft = $w("#autOftenThur3");
+
+ if(ThurAut.checked) {
+   ThurAutDet.expand();
+   ThurAutTyp.required = true;
+   ThurAutOft.required = true;
+     console.log('Expanding Thur Aut Details 3 \& Requiring Thur Type and Often Time');
 }
 else {
-   $w("#autDetailsThur3").collapse();
-   $w("#autTypeThur3").required = false;
-   $w("#autOftenThur3").required = false;
+   ThurAutDet.collapse();
+   ThurAutTyp.required = false;
+   ThurAutOft.required = false;
 } 
 }
 
 export function autDayFri3_change() {
- if( $w("#autDayFri3").checked) {
-   $w("#autDetailsFri3").expand();
-   $w("#autTypeFri3").required = true;
-   $w("#autOftenFri3").required = true;
+let FriAut = $w("#autDayFri3");
+let FriAutDet = $w("#autDetailsFri3");
+let FriAutTyp = $w("#autTypeFri3");
+let FriAutOft = $w("#autOftenFri3");
+
+ if(FriAut.checked) {
+   FriAutDet.expand();
+   FriAutTyp.required = true;
+   FriAutOft.required = true;
+     console.log('Expanding Fri Aut Details 3 \& Requiring Fri Type and Often Time');
 }
 else {
-   $w("#autDetailsFri3").collapse();
-   $w("#autTypeFri3").required = false;
-   $w("#autOftenFri3").required = false;
+   FriAutDet.collapse();
+   FriAutTyp.required = false;
+   FriAutOft.required = false;
 } 
 }
 
 export function autDaySat3_change() {
- if( $w("#autDaySat3").checked) {
-   $w("#autDetailsSat3").expand();
-   $w("#autTypeSat3").required = true;
-   $w("#autOftenSat3").required = true;
+let SatAut = $w("#autDaySat3");
+let SatAutDet = $w("#autDetailsSat3");
+let SatAutTyp = $w("#autTypeSat3");
+let SatAutOft = $w("#autOftenSat3");
+
+ if(SatAut.checked) {
+   SatAutDet.expand();
+   SatAutTyp.required = true;
+   SatAutOft.required = true;
+     console.log('Expanding Sat Aut Details 3 \& Requiring Sat Type and Often Time');
 }
 else {
-   $w("#autDetailsSat3").collapse();
-   $w("#autTypeSat3").required = false;
-   $w("#autOftenSat3").required = false;
+   SatAutDet.collapse();
+   SatAutTyp.required = false;
+   SatAutOft.required = false;
 } 
 }
 // FOR AUTHORS | End
 
 // FOR ARTISTS | Start
 export function artDaySun3_change() {
-if( $w("#artDaySun3").checked) {
-   $w("#artDetailsSun3").expand();
-   $w("#artTypeSun3").required = true;
-   $w("#artOftenSun3").required = true;
+let SunArt = $w("#artDaySun3");
+let SunArtDet = $w("#artDetailsSun3");
+let SunArtTyp = $w("#artDetailsSun3");
+let SunArtOft = $w("#artOftenSun3");
+
+if( SunArt.checked) {
+   SunArtDet.expand();
+   SunArtTyp.required = true;
+   SunArtOft.required = true;
+     console.log('Expanding Sun Art Details 3 \& Requiring Sun Type and Often Time');
 }
 else {
-   $w("#artDetailsSun3").collapse();
-   $w("#artTypeSun3").required = false;
-   $w("#artOftenSun3").required = false;
+   SunArtDet.collapse();
+   SunArtTyp.required = false;
+   SunArtOft.required = false;
 }
 }
 
 export function artDayMon3_change() {
- if( $w("#artDayMon3").checked) {
-   $w("#artDetailsMon3").expand();
-   $w("#artTypeMon3").required = true;
-   $w("#artOftenMon3").required = true;
+let MonArt = $w("#artDayMon3");
+let MonArtDet = $w("#artDetailsMon3");
+let MonArtTyp = $w("#artTypeMon3");
+let MonArtOft = $w("#artOftenMon3");
+
+ if(MonArt.checked) {
+   MonArtDet.expand();
+   MonArtTyp.required = true;
+   MonArtOft.required = true;
+     console.log('Expanding Mon Art Details 3 \& Requiring Mon Type and Often Time');
 }
 else {
-   $w("#artDetailsMon3").collapse();
-   $w("#artTypeMon3").required = false;
-   $w("#artOftenMon3").required = false;
+   MonArtDet.collapse();
+   MonArtTyp.required = false;
+   MonArtOft.required = false;
 }
 }
 
 export function artDayTue3_change() {
- if( $w("#artDayTue3").checked) {
-   $w("#artDetailsTue3").expand();
-   $w("#artTypeTue3").required = true;
-   $w("#artOftenTue3").required = true;
+let TueArt = $w("#artDayTue3");
+let TueArtDet = $w("#artDetailsTue3");
+let TueArtTyp = $w("#artTypeTue3");
+let TueArtOft = $w("#artOftenTue3");
+
+ if(TueArt.checked) {
+   TueArtDet.expand();
+   TueArtTyp.required = true;
+   TueArtOft.required = true;
+     console.log('Expanding Tue Art Details 3 \& Requiring Tue Type and Often Time');
 }
 else {
-   $w("#artDetailsTue3").collapse();
-   $w("#artTypeTue3").required = false;
-   $w("#artOftenTue3").required = false;
+   TueArtDet.collapse();
+   TueArtTyp.required = false;
+   TueArtOft.required = false;
 }
 }
 
 export function artDayWed3_change() {
- if( $w("#artDayWed3").checked) {
-   $w("#artDetailsWed3").expand();
-   $w("#artTypeWed3").required = true;
-   $w("#artOftenWed3").required = true;
+let WedArt = $w("#artDayWed3");
+let WedArtDet = $w("#artDetailsWed3");
+let WedArtTyp = $w("#artTypeWed3");
+let WedArtOft = $w("#artOftenWed3");
+
+ if(WedArt.checked) {
+   WedArtDet.expand();
+   WedArtTyp.required = true;
+   WedArtOft.required = true;
+     console.log('Expanding Wed Art Details 3 \& Requiring Wed Type and Often Time');
 }
 else {
-   $w("#artDetailsWed3").collapse();
-   $w("#artTypeWed3").required = false;
-   $w("#artOftenWed3").required = false;
+   WedArtDet.collapse();
+   WedArtTyp.required = false;
+   WedArtOft.required = false;
 } 
 }
 
 export function artDayThur3_change() {
- if( $w("#artDayThur3").checked) {
-   $w("#artDetailsThur3").expand();
-   $w("#artTypeThur3").required = true;
-   $w("#artOftenThur3").required = true;
+let ThurArt = $w("#artDayThur3");
+let ThurArtDet = $w("#artDetailsThur3");
+let ThurArtTyp = $w("#artTypeThur3");
+let ThurArtOft = $w("#artOftenThur3");
+
+ if(ThurArt.checked) {
+   ThurArtDet.expand();
+   ThurArtTyp.required = true;
+   ThurArtOft.required = true;
+     console.log('Expanding Thur Art Details 3 \& Requiring Thur Type and Often Time');
 }
 else {
-   $w("#artDetailsThur3").collapse();
-   $w("#artTypeThur3").required = false;
-   $w("#artOftenThur3").required = false;
+   ThurArtDet.collapse();
+   ThurArtTyp.required = false;
+   ThurArtOft.required = false;
 } 
 }
 
 export function artDayFri3_change() {
- if( $w("#artDayFri3").checked) {
-   $w("#artDetailsFri3").expand();
-   $w("#artTypeFri3").required = true;
-   $w("#artOftenFri3").required = true;
+let FriArt = $w("#artDayFri3");
+let FriArtDet = $w("#artDetailsFri3");
+let FriArtTyp = $w("#artTypeFri3");
+let FriArtOft = $w("#artOftenFri3");
+
+ if(FriArt.checked) {
+   FriArtDet.expand();
+   FriArtTyp.required = true;
+   FriArtOft.required = true;
+     console.log('Expanding Fri Art Details 3 \& Requiring Fri Type and Often Time');
 }
 else {
-   $w("#artDetailsFri3").collapse();
-   $w("#artTypeFri3").required = false;
-   $w("#artOftenFri3").required = false;
+   FriArtDet.collapse();
+   FriArtTyp.required = false;
+   FriArtOft.required = false;
 } 
 }
 
 export function artDaySat3_change() {
- if( $w("#artDaySat3").checked) {
-   $w("#artDetailsSat3").expand();
-   $w("#artTypeSat3").required = true;
-   $w("#artOftenSat3").required = true;
+let SatArt = $w("#artDaySat3");
+let SatArtDet = $w("#artDetailsSat3");
+let SatArtTyp = $w("#artTypeSat3");
+let SatArtOft = $w("#artOftenSat3");
+
+ if(SatArt.checked) {
+   SatArtDet.expand();
+   SatArtTyp.required = true;
+   SatArtOft.required = true;
+     console.log('Expanding Sat Art Details 3 \& Requiring Sat Type and Often Time');
 }
 else {
-   $w("#artDetailsSat3").collapse();
-   $w("#artTypeSat3").required = false;
-   $w("#artOftenSat3").required = false;
+   SatArtDet.collapse();
+   SatArtTyp.required = false;
+   SatArtOft.required = false;
 } 
 }
 // FOR ARTISTS | End
 
 // FOR VLOGGERS | Start
 export function vlogDaySun3_change() {
-if( $w("#vlogDaySun3").checked) {
-   $w("#vlogOftenSun3").expand();
-   $w("#vlogOftenSun3").required = true;
+let SunVlog = $w("#vlogDaySun3");
+
+let SunVlogOft = $w("#vlogOftenSun3");
+
+if( SunVlog.checked) {
+   SunVlogOft.expand();
+   SunVlogOft.required = true;
+     console.log('Expanding Sun Vlog Details 3 \& Requiring Sun Often');
 }
 else {
-   $w("#vlogOftenSun3").collapse();
-   $w("#vlogOftenSun3").required = false;
+   SunVlogOft.collapse();
+   SunVlogOft.required = false;
 }
 }
 
 export function vlogDayMon3_change() {
- if( $w("#vlogDayMon3").checked) {
-   $w("#vlogOftenMon3").expand();
-   $w("#vlogOftenMon3").required = true;
+let MonVlog = $w("#vlogDayMon3");
+let MonVlogOft = $w("#vlogOftenMon3");
+
+ if(MonVlog.checked) {
+   MonVlogOft.expand();
+   MonVlogOft.required = true;
+     console.log('Expanding Mon Vlog Details 3 \& Requiring Mon Often');
 }
 else {
-   $w("#vlogOftenMon3").collapse();
-   $w("#vlogOftenMon3").required = false;
+   MonVlogOft.collapse();
+   MonVlogOft.required = false;
 }
 }
 
 export function vlogDayTue3_change() {
- if( $w("#vlogDayTue3").checked) {
-   $w("#vlogOftenTue3").expand();
-   $w("#vlogOftenTue3").required = true;
+let TueVlog = $w("#vlogDayTue3");
+let TueVlogOft = $w("#vlogOftenTue3");
+
+ if(TueVlog.checked) {
+   TueVlogOft.expand();
+   TueVlogOft.required = true;
+     console.log('Expanding Tue Vlog Details 3 \& Requiring Tue Often');
 }
 else {
-   $w("#vlogOftenTue3").collapse();
-   $w("#vlogOftenTue3").required = false;
+   TueVlogOft.collapse();
+   TueVlogOft.required = false;
 }
 }
 
 export function vlogDayWed3_change() {
- if( $w("#vlogDayWed3").checked) {
-   $w("#vlogOftenWed3").expand();
-   $w("#vlogOftenWed3").required = true;
+let WedVlog = $w("#vlogDayWed3");
+let WedVlogOft = $w("#vlogOftenWed3");
+
+ if(WedVlog.checked) {
+   WedVlogOft.expand();
+   WedVlogOft.required = true;
+     console.log('Expanding Wed Vlog Details 3 \& Requiring Wed Often');
 }
 else {
-   $w("#vlogOftenWed3").collapse();
-   $w("#vlogOftenWed3").required = false;
+   WedVlogOft.collapse();
+   WedVlogOft.required = false;
 } 
 }
 
 export function vlogDayThur3_change() {
- if( $w("#vlogDayThur3").checked) {
-   $w("#vlogOftenThur3").expand();
-   $w("#vlogOftenThur3").required = true;
+let ThurVlog = $w("#vlogDayThur3");
+let ThurVlogOft = $w("#vlogOftenThur3");
+
+ if(ThurVlog.checked) {
+   ThurVlogOft.expand();
+   ThurVlogOft.required = true;
+
+     console.log('Expanding Thur Vlog Details 3 \& Requiring Thur Often');
 }
 else {
-   $w("#vlogOftenThur3").collapse();
-   $w("#vlogOftenThur3").required = false;
+   ThurVlogOft.collapse();
+   ThurVlogOft.required = false;
 } 
 }
 
 export function vlogDayFri3_change() {
- if( $w("#vlogDayFri3").checked) {
-   $w("#vlogOftenFri3").expand();
-   $w("#vlogOftenFri3").required = true;
+let FriVlog = $w("#vlogDayFri3");
+let FriVlogOft = $w("#vlogOftenFri3");
+
+ if(FriVlog.checked) {
+   FriVlogOft.expand();
+   FriVlogOft.required = true;
+     console.log('Expanding Fri Vlog Details 3 \& Requiring Fri Often');
 }
 else {
-   $w("#vlogOftenFri3").collapse();
-   $w("#vlogOftenFri3").required = false;
+   FriVlogOft.collapse();
+   FriVlogOft.required = false;
 } 
 }
 
 export function vlogDaySat3_change() {
- if( $w("#vlogDaySat3").checked) {
-   $w("#vlogOftenSat3").expand();
-   $w("#vlogOftenSat3").required = true;
+let SatVlog = $w("#vlogDaySat3");
+let SatVlogOft = $w("#vlogOftenSat3");
+
+ if(SatVlog.checked) {
+   SatVlogOft.expand();
+   SatVlogOft.required = true;
+     console.log('Expanding Sat Vlog Details 3 \& Requiring Sat Often');
 }
 else {
-   $w("#vlogOftenSat3").collapse();
-   $w("#vlogOftenSat3").required = false;
+   SatVlogOft.collapse();
+   SatVlogOft.required = false;
 } 
 }
 // FOR VLOGGERS | End
 
 // FOR STREAMERS | Start
 export function strDaySun3_change() {
-if( $w("#strDaySun3").checked) {
-   $w("#strDetailsSun3").expand();
-   $w("#strLengthSun3").required = true;
-   $w("#strStartSun3").required = true;
+let SunStr = $w("#strDaySun3");
+let SunStrDet = $w("#strDetailsSun3");
+let SunStrLen = $w("#strDetailsSun3");
+let SunStrSta = $w("#strStartSun3");
+
+if( SunStr.checked) {
+   SunStrDet.expand();
+   SunStrLen.required = true;
+   SunStrSta.required = true;
+     console.log('Expanding Sun Str Details 3 \& Requiring Sun Length and Start Time');
 }
 else {
-   $w("#strDetailsSun3").collapse();
-   $w("#strLengthSun3").required = false;
-   $w("#strStartSun3").required = false;
+   SunStrDet.collapse();
+   SunStrLen.required = false;
+   SunStrSta.required = false;
 }
 }
 
 export function strDayMon3_change() {
- if( $w("#strDayMon3").checked) {
-   $w("#strDetailsMon3").expand();
-   $w("#strLengthMon3").required = true;
-   $w("#strStartMon3").required = true;
+let MonStr = $w("#strDayMon3");
+let MonStrDet = $w("#strDetailsMon3");
+let MonStrLen = $w("#strLengthMon3");
+let MonStrSta = $w("#strStartMon3");
+
+ if(MonStr.checked) {
+   MonStrDet.expand();
+   MonStrLen.required = true;
+   MonStrSta.required = true;
+     console.log('Expanding Mon Str Details 3 \& Requiring Mon Length and Start Time');
 }
 else {
-   $w("#strDetailsMon3").collapse();
-   $w("#strLengthMon3").required = false;
-   $w("#strStartMon3").required = false;
+   MonStrDet.collapse();
+   MonStrLen.required = false;
+   MonStrSta.required = false;
 }
 }
 
 export function strDayTue3_change() {
- if( $w("#strDayTue3").checked) {
-   $w("#strDetailsTue3").expand();
-   $w("#strLengthTue3").required = true;
-   $w("#strStartTue3").required = true;
+let TueStr = $w("#strDayTue3");
+let TueStrDet = $w("#strDetailsTue3");
+let TueStrLen = $w("#strLengthTue3");
+let TueStrSta = $w("#strStartTue3");
+
+ if(TueStr.checked) {
+   TueStrDet.expand();
+   TueStrLen.required = true;
+   TueStrSta.required = true;
+     console.log('Expanding Tue Str Details 3 \& Requiring Tue Length and Start Time');
 }
 else {
-   $w("#strDetailsTue3").collapse();
-   $w("#strLengthTue3").required = false;
-   $w("#strStartTue3").required = false;
+   TueStrDet.collapse();
+   TueStrLen.required = false;
+   TueStrSta.required = false;
 }
 }
 
 export function strDayWed3_change() {
- if( $w("#strDayWed3").checked) {
-   $w("#strDetailsWed3").expand();
-   $w("#strLengthWed3").required = true;
-   $w("#strStartWed3").required = true;
+let WedStr = $w("#strDayWed3");
+let WedStrDet = $w("#strDetailsWed3");
+let WedStrLen = $w("#strLengthWed3");
+let WedStrSta = $w("#strStartWed3");
+
+ if(WedStr.checked) {
+   WedStrDet.expand();
+   WedStrLen.required = true;
+   WedStrSta.required = true;
+     console.log('Expanding Wed Str Details 3 \& Requiring Wed Length and Start Time');
 }
 else {
-   $w("#strDetailsWed3").collapse();
-   $w("#strLengthWed3").required = false;
-   $w("#strStartWed3").required = false;
+   WedStrDet.collapse();
+   WedStrLen.required = false;
+   WedStrSta.required = false;
 } 
 }
 
 export function strDayThur3_change() {
- if( $w("#strDayThur3").checked) {
-   $w("#strDetailsThur3").expand();
-   $w("#strLengthThur3").required = true;
-   $w("#strStartThur3").required = true;
+let ThurStr = $w("#strDayThur3");
+let ThurStrDet = $w("#strDetailsThur3");
+let ThurStrLen = $w("#strLengthThur3");
+let ThurStrSta = $w("#strStartThur3");
+
+ if(ThurStr.checked) {
+   ThurStrDet.expand();
+   ThurStrLen.required = true;
+   ThurStrSta.required = true;
+     console.log('Expanding Thur Str Details 3 \& Requiring Thur Length and Start Time');
 }
 else {
-   $w("#strDetailsThur3").collapse();
-   $w("#strLengthThur3").required = false;
-   $w("#strStartThur3").required = false;
+   ThurStrDet.collapse();
+   ThurStrLen.required = false;
+   ThurStrSta.required = false;
 } 
 }
 
 export function strDayFri3_change() {
- if( $w("#strDayFri3").checked) {
-   $w("#strDetailsFri3").expand();
-   $w("#strLengthFri3").required = true;
-   $w("#strStartFri3").required = true;
+let FriStr = $w("#strDayFri3");
+let FriStrDet = $w("#strDetailsFri3");
+let FriStrLen = $w("#strLengthFri3");
+let FriStrSta = $w("#strStartFri3");
+
+ if(FriStr.checked) {
+   FriStrDet.expand();
+   FriStrLen.required = true;
+   FriStrSta.required = true;
+     console.log('Expanding Fri Str Details 3 \& Requiring Fri Length and Start Time');
 }
 else {
-   $w("#strDetailsFri3").collapse();
-   $w("#strLengthFri3").required = false;
-   $w("#strStartFri3").required = false;
+   FriStrDet.collapse();
+   FriStrLen.required = false;
+   FriStrSta.required = false;
 } 
 }
 
 export function strDaySat3_change() {
- if( $w("#strDaySat3").checked) {
-   $w("#strDetailsSat3").expand();
-   $w("#strLengthSat3").required = true;
-   $w("#strStartSat3").required = true;
+let SatStr = $w("#strDaySat3");
+let SatStrDet = $w("#strDetailsSat3");
+let SatStrLen = $w("#strLengthSat3");
+let SatStrSta = $w("#strStartSat3");
+
+ if(SatStr.checked) {
+   SatStrDet.expand();
+   SatStrLen.required = true;
+   SatStrSta.required = true;
+     console.log('Expanding Sat Str Details 3 \& Requiring Sat Length and Start Time');
 }
 else {
-   $w("#strDetailsSat3").collapse();
-   $w("#strLengthSat3").required = false;
-   $w("#strStartSat3").required = false;
+   SatStrDet.collapse();
+   SatStrLen.required = false;
+   SatStrSta.required = false;
 } 
 }
 // FOR STREAMERS | End
@@ -2092,4 +2683,3 @@ else {
 // **TERTIARY BOXES** | End
 
 // COMMITMENT/AVAILABILITY | End
-
